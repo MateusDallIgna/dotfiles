@@ -51,9 +51,3 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Function to open selected files in nvim using fzf with bat preview
-function fzf() {
-  local files
-  files=$(command fzf --preview 'bat --color=always --style=full {}') || return
-  nvim -o $files
-}
