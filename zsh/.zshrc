@@ -20,7 +20,7 @@ fi
 source <(fzf --zsh)
 
 # List of plugins used
-plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting fzf-tab )
+plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting fzf-tab ssh-agent )
 source $ZSH/oh-my-zsh.sh
 
 
