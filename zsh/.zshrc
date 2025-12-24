@@ -20,7 +20,7 @@ fi
 source <(fzf --zsh)
 
 # List of plugins used
-plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting fzf-tab ssh-agent )
+plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting fzf-tab )
 source $ZSH/oh-my-zsh.sh
 
 
@@ -51,3 +51,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# SSH agent setup
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+  eval "$(ssh-agent -s)" > /dev/null
+  ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
+fi
