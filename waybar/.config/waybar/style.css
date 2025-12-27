@@ -1,0 +1,156 @@
+@import "theme.css";
+
+* {
+  border: none;
+  border-radius: 0;
+
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+
+  font-size: 14px;
+
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+tooltip {
+  background: @main-bg;
+  border: 1px solid @main-bg;
+  border-radius: 12px;
+}
+
+tooltip label {
+  color: @main-fg;
+  padding: 6px;
+}
+
+#workspaces {
+  background-color: @main-bg;
+  padding: 5px 3px;
+  margin: 0 0 0 12px;
+  border: 1px solid @main-bg;
+  border-radius: 18px;
+  color: @main-fg;
+}
+
+#workspaces button {
+  padding: 0px 6px;
+  margin: 0 3px;
+  border-radius: 50px;
+  color: @main-fg;
+  background-color: @main-bg;
+  animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+  background-color: @active-bg;
+  color: @active-fg;
+  min-width: 30px;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+  padding: 0px 10px;
+  font-size: 13px;
+}
+
+#workspaces button:hover {
+  background-color: @hover-bg;
+  color: @hover-fg;
+  border-radius: 16px;
+  min-width: 30px;
+  background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  color: @main-bg;
+  border-radius: 16px;
+  min-width: 50px;
+  background-size: 400% 400%;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#battery,
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#clock,
+#privacy,
+#tray,
+#custom-notification {
+  background-color: @main-bg;
+  color: @main-fg;
+  padding: 0px 15px 0px 15px;
+  margin: 0 0 0 12px;
+  border-radius: 50px;
+  border: 1px solid @main-bg;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#clock {
+  color: @blue;
+}
+
+#custom-notification {
+  color: @main-fg;
+  margin: 0 12px 0 12px;
+}
+
+#network {
+  color: @pink;
+}
+
+#pulseaudio {
+  color: @yellow;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @blue;
+}
+
+#battery.low {
+  color: @red;
+}
+
+#taskbar {
+  background-color: @main-bg;
+  color: @main-fg;
+  padding: 0px 10px;
+  margin: 0 0 0 12px;
+  border-radius: 50px;
+  border: 1px solid @main-bg;
+}
+
+#taskbar button {
+  background-color: @main-bg;
+  border-radius: 10px;
+  padding: 0px 10px;
+  animation: tb_normal 20s ease-in-out 1;
+}
+
+#taskbar button.active {
+  background-color: @active-bg;
+  color: @active-fg;
+  border-radius: 16px;
+  padding: 0px 10px;
+  animation: tb_normal 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button:hover {
+  background-color: @hover-bg;
+  color: @hover-fg;
+  border-radius: 16px;
+  padding: 0px 10px;
+  background-size: 400% 400%;
+  animation: tb_normal 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
