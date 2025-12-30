@@ -1,12 +1,20 @@
-$HOME/.config/waybar/theme.css|${scrDir}/wbarconfgen.sh
-/* To enable blur please make sure alpha is greater than 0 */
-@define-color bar-bg rgba(0, 0, 0, 0.1); 
+$HOME/.config/waybar/theme.css|/home/mateusdall/.local/share/scripts/startwaybar.sh
+@define-color bar-bg rgba(0, 0, 0, 0.1);
 
-@define-color main-bg #475437;
-@define-color main-fg #b5cc97;
+@define-color main-bg #282828;
+@define-color main-fg #ebdbb2;
 
-@define-color wb-act-bg #668f31;
-@define-color wb-act-fg #c2d89c;
+@define-color active-bg #98971a;
+@define-color active-fg #282828;
 
-@define-color wb-hvr-bg #c6eb6f;
-@define-color wb-hvr-fg #c0fc47;
+@define-color hover-bg #d79921;
+@define-color hover-fg #282828;
+
+@define-color red #cc241d;
+@define-color orange #d65d0e;
+@define-color yellow #d79921;
+@define-color green #98971a;
+@define-color blue #8ec07c;
+@define-color purple #b16286;
+@define-color pink #d3869b;
+@define-color aqua #689d6a;

@@ -1,11 +1,14 @@
-@define-color main-bg #11111b; /* general modules background */
-@define-color main-fg #cdd6f4; /* general modules foreground, like icons*/
 
-@define-color active-bg #a6adc8; /* general modules active background */
-@define-color active-fg #313244; /* general modules active foreground, like color of the text */
+@define-color bar-bg rgba(0, 0, 0, 0.1);
 
-@define-color hover-bg #f5c2e7; /* general modules active background */
-@define-color hover-fg #313244; /* general modules active background, like color of the text */
+@define-color main-bg #11111b;
+@define-color main-fg #cdd6f4;
+
+@define-color active-bg #a6adc8;
+@define-color active-fg #313244;
+
+@define-color hover-bg #f5c2e7;
+@define-color hover-fg #313244;
 
 @define-color red #f38ba8;
 @define-color orange #fab387;

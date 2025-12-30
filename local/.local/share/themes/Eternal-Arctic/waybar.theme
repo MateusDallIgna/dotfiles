@@ -1,11 +1,20 @@
-$HOME/.config/waybar/theme.css|${scrDir}/wbarconfgen.sh
+$HOME/.config/waybar/theme.css|/home/mateusdall/.local/share/scripts/startwaybar.sh
 @define-color bar-bg rgba(0, 0, 0, 0);
 
 @define-color main-bg #3B4252;
 @define-color main-fg #D8DEE9;
 
-@define-color wb-act-bg #4C566A;
-@define-color wb-act-fg #ECEFF4;
+@define-color active-bg #4C566A;
+@define-color active-fg #ECEFF4;
 
-@define-color wb-hvr-bg #81A1C1;
-@define-color wb-hvr-fg #ECEFF4;
+@define-color hover-bg #81A1C1;
+@define-color hover-fg #ECEFF4;
+
+@define-color red #bf616a;
+@define-color orange #d08770;
+@define-color yellow #ebcb8b;
+@define-color green #a3be8c;
+@define-color blue #81a1c1;
+@define-color purple #b48ead;
+@define-color pink #b48ead;
+@define-color aqua #8fbcbb;
