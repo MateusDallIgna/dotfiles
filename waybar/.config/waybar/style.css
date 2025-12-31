@@ -4,7 +4,7 @@
   border: none;
   border-radius: 0;
 
-  font-family: "JetBrainsMono Nerd Font";
+  font-family: "JetBrainsMono Nerd Font Propo";
   font-weight: bold;
 
   font-size: 14px;
@@ -79,7 +79,6 @@ tooltip label {
 #memory,
 #network,
 #clock,
-#privacy,
 #tray,
 #custom-notification {
   background-color: @main-bg;

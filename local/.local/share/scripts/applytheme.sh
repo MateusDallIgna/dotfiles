@@ -47,3 +47,15 @@ if [ -f "$HYPR_THEME" ]; then
 
     echo "✓ GTK atualizado"
 fi
+
+## Set the last wallpaper used in the theme
+if [ -f $THEME_DIR/wall.set ]; then
+    WALLPAPER_NAME=$(head -n1 $THEME_DIR/wall.set) 
+    swww img -t wipe --transition-duration 3 --transition-fps 60 "$THEME_DIR/wallpapers/$WALLPAPER_NAME"
+    ## Set rofi background
+    cp "$THEME_DIR/wallpapers/$WALLPAPER_NAME" $HOME/.config/rofi/backgrounds/current_wallpaper.png
+    
+fi
+
+echo "$THEME_NAME" > $HOME/.cache/current_theme.txt
+

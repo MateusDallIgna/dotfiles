@@ -131,6 +131,7 @@ keymap = [
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 	{ on = [ "g", "p" ],       run = "cd ~/Documentos/Projects/", desc = "Go to project directory"},
 	{ on = [ "g", "w" ],       run = "cd ~/Documentos/Workspace/", desc = "Go to Workspace directory"},
+	{ on = [ "g", "l" ],       run = "cd ~/.local", desc = "Go to .local directory"},
 	{ on = [ "g", "y" ],       run = "cd ~/.config/yazi", desc = "Go to yazi directory"},
 	{ on = [ "g", "n" ],       run = "cd ~/.config/nvim", desc = "Go to nvim directory"},
 	{ on = [ "g", "z" ],       run = "shell 'nvim ~/.zshrc' --block", desc = "Open zshrc"},
