@@ -1,0 +1,79 @@
+configuration {
+    show-icons:                 true;
+    font:                       "JetBrainsMono Nerd Font Propo 13";
+    case-sensitive:              false;
+}
+
+@theme "~/.config/rofi/theme.rasi"
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    width:                       500px;
+    padding:                     1em;
+    border:                      2px;
+    border-radius:               15px;
+    background-color:            @background;
+    border-color:                @border;
+}
+
+mainbox {
+    spacing:                     1em;
+    background-color:            transparent;
+}
+
+inputbar {
+    padding:                     20px;
+    border-radius:               50px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    expand:                      false;
+    str:                         "";
+padding:                         0px 15px 0px 0px;
+    text-color:                  inherit;
+    background-color:            transparent;
+}
+
+entry {
+    background-color:            transparent;
+    text-color:                  inherit;
+    placeholder:                 "Search themes";
+    placeholder-color:           inherit;
+}
+
+listview {
+    lines:                       8;
+    spacing:                     8px;
+    scrollbar:                   false;
+    background-color:            transparent;
+}
+
+element {
+    padding:                     12px;
+    border-radius:               8px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+element selected {
+    background-color:            @selected-background;
+    text-color:                  @selected-foreground;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    horizontal-align:            0.0;
+}
+
+element-icon {
+    size:            24px;
+    cursor:          inherit;
+    background-color: transparent;
+    text-color:       inherit;
+}
