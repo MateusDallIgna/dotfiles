@@ -1,6 +1,13 @@
 #!/bin/bash
 
-# Install oh-my-zsh if not already installed
+CURRENT_SHELL=$(basename "$SHELL")
+
+if [[ "$CURRENT_SHELL" == "bash" ]]; then
+    echo "Default shell changed to zsh. Please log out and log back in for the change to take effect."
+    sudo chsh -s $(which zsh) $USER
+fi
+
+#Install oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     echo "oh-my-zsh installed successfully."

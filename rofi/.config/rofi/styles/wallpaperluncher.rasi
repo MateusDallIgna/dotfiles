@@ -62,16 +62,14 @@ element selected {
 }
 
 element-icon {
-    size:             300px;
+    size:             354px;
     horizontal-align: 0.5;
     background-color: transparent;
     cursor:           inherit;
 }
 
 element-text {
-    horizontal-align: 0.5;
-    text-color:       inherit;  
-    background-color: transparent;
+    enabled: false;
 }
 
 textbox-prompt-colon {
