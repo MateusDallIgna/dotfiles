@@ -6,9 +6,9 @@ return {
 		config = function()
 			require("material").setup({
 				contrast = {
-					sidebars = true, -- Aumenta o contraste da lateral
-					floating_windows = true, -- Melhora visibilidade em popups/flutuantes
-					line_numbers = true, -- Destaca números de linha
+					sidebars = true,
+					floating_windows = true,
+					line_numbers = true,
 					lualine_style = "stealth",
 					cursor_line = true,
 				},
@@ -29,9 +29,9 @@ return {
 					light = "latte",
 					dark = "mocha",
 				},
-				transparent_background = false, -- disables setting the background color.
+				transparent_background = true, -- disables setting the background color.
 				float = {
-					transparent = false, -- enable transparent floating windows
+					transparent = true, -- enable transparent floating windows
 					solid = false, -- use solid styling for floating windows, see |winborder|
 				},
 				show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
