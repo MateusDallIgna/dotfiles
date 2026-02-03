@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grimblast copysave area /tmp/screenshot.png && swappy -f /tmp/screenshot.png
+grimblast copysave area /tmp/screenshot.png && satty -f /tmp/screenshot.png

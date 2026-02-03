@@ -2,13 +2,20 @@
   "layer": "top",
   "position": "top",
 
-  "modules-center": [
-    "tray",
+  "modules-left": [
+    "cpu",
+    "memory",
     "clock",
-    "hyprland/workspaces",
-    "pulseaudio",
+    "hyprland/workspaces"
+  ],
+  "modules-center": ["wlr/taskbar"],
+
+  "modules-right": [
+    "battery",
     "network",
-    "battery"
+    "pulseaudio",
+    "tray",
+    "custom/notification"
   ],
 
   "cpu": {
@@ -24,7 +31,7 @@
   },
 
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:%H:%M}  ",
     "format-alt": "{:%A, %B %d, %Y (%R)}  ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -49,30 +56,14 @@
     }
   },
 
-"hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-        "1": "1",
-        "2": "2",
-        "3": "3",
-        "4": "4",
-        "5": "5",
-        "6": "六",
-        "7": "七",
-        "8": "八",
-        "9": "九",
-        "10": "十",
-        "default": "",
-        "urgent": ""
-    },
-    "persistent-workspaces": {
-        "*": 5
-    },
-
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "active-only": false,
     "on-click": "activate",
-    "on-scroll-down": "hyprctl dispatch workspace e+1",
-    "on-scroll-up": "hyprctl dispatch workspace e-1"
-},
+    "persistent-workspaces": {}
+  },
+
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 20,
@@ -93,7 +84,7 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}",
+    "format": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""],
     "max-length": 25
   },
@@ -101,7 +92,7 @@
   "network": {
     "interface": "wlan0",
     "format": "{ifname}",
-    "format-wifi": "",
+    "format-wifi": "{essid} ",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
     "format-disconnected": "",
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
@@ -112,7 +103,7 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
       "headphone": "",
