@@ -1,19 +1,19 @@
 @define-color bar-bg rgba(0, 0, 0, 0);
 
-@define-color main-bg #161616;
-@define-color main-fg #f2f4f8;
+@define-color main-bg #282828;
+@define-color main-fg #ebdbb2;
 
-@define-color active-bg #ee5396;
-@define-color active-fg #ffffff;
+@define-color active-bg #d79921;
+@define-color active-fg #282828;
 
-@define-color hover-bg #393939;
-@define-color hover-fg #ee5396;
+@define-color hover-bg #fabd2f;
+@define-color hover-fg #282828;
 
-@define-color red #ff6f6f;
-@define-color orange #ffafa4;
-@define-color yellow #ffe6b3;
-@define-color green #b3e6a0;
-@define-color blue #a0c4ff;
-@define-color purple #d4a0ff;
-@define-color pink #ffb3d9;
-@define-color aqua #a0ffe6;
+@define-color red #ea6962;
+@define-color orange #d78c7c;
+@define-color yellow #d8c477;
+@define-color green #a9b665;
+@define-color blue #7daea3;
+@define-color purple #d3869b;
+@define-color pink #d3869b;
+@define-color aqua #89b482;

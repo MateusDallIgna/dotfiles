@@ -18,13 +18,6 @@ window#waybar {
   background: transparent;
 }
 
-.modules-center {
-  background: @main-bg;
-  padding: 6px 12px;
-  border-radius: 28px;
-  box-shadow: 0 4 12px rgba(0, 0, 0, 0.3);
-}
-
 tooltip {
   background: @main-bg;
   border: 1px solid @main-bg;
@@ -37,6 +30,7 @@ tooltip label {
 }
 
 #workspaces {
+  background-color: @main-bg;
   padding: 5px 3px;
   margin: 0 0 0 12px;
   border: 1px solid @main-bg;
@@ -89,6 +83,7 @@ tooltip label {
 #custom-notification {
   background-color: @main-bg;
   color: @main-fg;
+  padding: 0px 15px 0px 15px;
   margin: 0 0 0 12px;
   border-radius: 50px;
   border: 1px solid @main-bg;
@@ -96,7 +91,7 @@ tooltip label {
 }
 
 #clock {
-  color: @main-fg;
+  color: @blue;
 }
 
 #custom-notification {
