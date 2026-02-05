@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grimblast copysave area /tmp/screenshot.png && satty -f /tmp/screenshot.png
+hyprshot -m region --raw | satty -f - --copy-command wl-copy

@@ -3,6 +3,7 @@
   "position": "top",
 
   "modules-center": [
+    "custom/updates",
     "tray",
     "clock",
     "hyprland/workspaces",
@@ -108,7 +109,7 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
+    "max-length": 50
   },
 
   "pulseaudio": {
@@ -161,5 +162,19 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  }
+  },
+
+  "custom/updates": {
+      "format": "{icon} {text}",
+      "return-type": "json",
+      "format-icons": {
+          "has-updates": "󰅢",
+          "updated": "󰅠"
+      },
+      "interval": 3600,
+      "exec-if": "which waybar-module-pacman-updates",
+      "exec": "timeout 3 stdbuf -oL waybar-module-pacman-updates | grep -E '^{' | tail -n 1",
+          "on-click": "kitty -e sudo pacman -Syu"
+      }
 }
+

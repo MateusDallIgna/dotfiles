@@ -80,6 +80,7 @@ tooltip label {
 }
 
 #battery,
+#custom-updates,
 #pulseaudio,
 #cpu,
 #memory,
@@ -122,6 +123,10 @@ tooltip label {
 
 #battery.low {
   color: @red;
+}
+
+#custom-updates {
+  color: @orange;
 }
 
 #taskbar {
