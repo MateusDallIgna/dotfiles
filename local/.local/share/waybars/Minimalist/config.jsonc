@@ -3,10 +3,10 @@
   "position": "top",
 
   "modules-center": [
-    "custom/updates",
-    "tray",
     "clock",
+    "tray",
     "hyprland/workspaces",
+    "custom/updates",
     "pulseaudio",
     "network",
     "battery"
@@ -171,7 +171,7 @@
           "has-updates": "󰅢",
           "updated": "󰅠"
       },
-      "interval": 3600,
+      "interval": 600,
       "exec-if": "which waybar-module-pacman-updates",
       "exec": "timeout 3 stdbuf -oL waybar-module-pacman-updates | grep -E '^{' | tail -n 1",
           "on-click": "kitty -e sudo pacman -Syu"

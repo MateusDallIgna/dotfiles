@@ -24,6 +24,8 @@ HYPR_THEME="$THEME_DIR/hypr.theme"
 
 if [ -f "$HYPR_THEME" ]; then
 
+    gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+
     GTK_THEME=$(grep '$GTK_THEME=' "$HYPR_THEME" | head -1 | sed 's/.*=//' | tr -d ' ')
 
     ICON_THEME=$(grep '$ICON_THEME' "$HYPR_THEME" | head -1 | sed 's/.*=//' | tr -d ' ')
