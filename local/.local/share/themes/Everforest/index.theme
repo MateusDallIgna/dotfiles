@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Everforest-Dark-Hard
+Comment=A comfortable natural palette theme based on Everforest Hard
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Everforest-Dark-Hard
+MetacityTheme=Everforest-Dark-Hard
+IconTheme=Tela-circle-green
+CursorTheme=Colloid-cursors
+ButtonLayout=close,minimize,maximize:menu

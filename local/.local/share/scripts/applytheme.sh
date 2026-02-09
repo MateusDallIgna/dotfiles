@@ -59,5 +59,10 @@ if [ -f $THEME_DIR/wall.set ]; then
     
 fi
 
+## Set the GTK theme
+
+cp -r "$THEME_DIR/gtk-3.0" $HOME/.config/
+cp -r "$THEME_DIR/gtk-4.0" $HOME/.config/
+
 echo "$THEME_NAME" > $HOME/.cache/current_theme.txt
 
