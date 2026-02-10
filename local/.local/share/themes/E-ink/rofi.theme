@@ -1,3 +1,4 @@
+$HOME/.config/rofi/theme.rasi
 * {
     /* Fundo Preto Tinta */
     background:           #121212E3;

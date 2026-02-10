@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=E-Ink-Dark
+Comment=Monochrome Dark E-Ink Aesthetic
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=E-Ink-Dark
+MetacityTheme=E-Ink-Dark
+IconTheme=Papirus-Dark
+CursorTheme=Colloid-cursors
+ButtonLayout=close,minimize,maximize:menu
+X-GNOME-ColorScheme=prefer-dark
