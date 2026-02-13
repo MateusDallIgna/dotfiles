@@ -1,0 +1,23 @@
+$HOME/.config/waybar/theme.css|/home/mateusdall/.local/share/scripts/startwaybar.sh
+@define-color bar-bg rgba(19, 21, 26, 0.85);
+
+@define-color main-bg #13151a;
+@define-color main-fg #c0caf5;
+
+/* Ativo: Coral brilhante */
+@define-color active-bg #f7768e;
+@define-color active-fg #13151a;
+
+/* Hover: Dourado Damasco */
+@define-color hover-bg #e0af68;
+@define-color hover-fg #13151a;
+
+/* Cores da paleta Redux */
+@define-color red #f7768e;
+@define-color orange #ff9e64;
+@define-color yellow #e0af68;
+@define-color green #9ece6a;
+@define-color blue #7aa2f7;
+@define-color purple #bb9af7;
+@define-color pink #f7768e;
+@define-color aqua #89ddff;

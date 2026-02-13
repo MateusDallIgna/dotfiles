@@ -1,0 +1,47 @@
+$HOME/.config/kitty/theme.conf|killall -SIGUSR1 kitty
+
+## name: Dusk-Ember Redux
+## author: Cohesive Twilight
+
+foreground              #c0caf5
+background              #13151a
+selection_foreground    #13151a
+selection_background    #e0af68
+
+cursor                  #e0af68
+cursor_text_color       #13151a
+
+active_border_color     #f7768e
+inactive_border_color   #1b1f27
+
+# black
+color0 #1b1f27
+color8 #414868
+
+# red (Coral)
+color1 #f7768e
+color9 #f7768e
+
+# green
+color2  #9ece6a
+color10 #9ece6a
+
+# yellow (Apricot Gold)
+color3  #e0af68
+color11 #e0af68
+
+# blue
+color4  #7aa2f7
+color12 #7aa2f7
+
+# magenta
+color5  #bb9af7
+color13 #bb9af7
+
+# cyan
+color6  #89ddff
+color14 #89ddff
+
+# white
+color7  #c0caf5
+color15 #ffffff

@@ -1,0 +1,30 @@
+$GTK_THEME=Dusk-Ember
+$ICON_THEME=Papirus-Dark
+$COLOR_SCHEME=prefer-dark
+
+exec = gsettings set org.gnome.desktop.interface icon-theme $ICON_THEME
+exec = gsettings set org.gnome.desktop.interface gtk-theme $GTK_THEME
+exec = gsettings set org.gnome.desktop.interface color-scheme $COLOR_SCHEME
+
+general {
+    gaps_in = 4
+    gaps_out = 10
+    border_size = 2
+    # Degradê sofisticado: Azul Céu -> Coral Brasa
+    col.active_border = rgba(7aa2f7ff) rgba(f7768eff) 45deg
+    col.inactive_border = rgba(1b1f27cc)
+    layout = dwindle
+}
+
+decoration {
+    rounding = 12
+    shadow:enabled = true
+    shadow:range = 20
+    shadow:color = rgba(00000055)
+
+    blur {
+        enabled = yes
+        size = 8
+        passes = 3
+    }
+}

@@ -1,16 +1,10 @@
 * {
-    /* Fundo Preto Tinta */
-    background:           #121212E3;
-    background-alt:       #1A1A1AFF;
-    
-    /* Texto Branco E-Ink (#CCCCCC) */
-    foreground:           #CCCCCCFF;
-    
-    /* Seleção: Fundo Branco, Texto Preto (Invertido) */
-    selected-background:  #CCCCCCFF;
-    selected-foreground:  #121212FF;
-    
-    border:               #CCCCCCFF;
-    active:               #FFFFFF;
-    urgent:               #808080FF;
+    background:         #161616E3;
+    background-alt:     #262626FF;
+    foreground:         #f2f4f8ff;
+    selected-background: #ee5396ff;
+    selected-foreground: #161616ff;
+    border:             #ee5396ff;
+    active:             #393939FF;
+    urgent:             #ff6f6fff;
 }

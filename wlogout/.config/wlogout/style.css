@@ -1,82 +1,76 @@
-* {
-  background-image: none;
-  box-shadow: none;
-}
+/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
+/* pywal-wlogout */
+
+/* Importing pywal colors */
 
 @import "../waybar/theme.css";
 
 window {
-  background-color: transparent;
+  font-family: Fira Code Medium;
+  font-size: 16pt;
+  color: @main-fg; /* text */
+  background-color: rgba(24, 27, 32, 0.2);
 }
 
 button {
-  border-radius: 0;
-  border-color: @main-bg;
-  text-decoration-color: @main-fg;
-  background-color: @main-bg;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 10px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 15%;
+  background-size: 20%;
+  background-color: transparent;
   animation: gradient_f 20s ease-in infinite;
-  margin: 10px;
+  transition: all 0.3s ease-in;
+  box-shadow: 0 0 10px 2px transparent;
+  border-radius: 50px;
+  border-color: transparent;
+  margin: 20px;
 }
 
 button:focus {
-  background-color: @main-bg;
+  box-shadow: none;
   background-size: 20%;
 }
 
-button:active,
 button:hover {
+  background-size: 50%;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
   background-color: @hover-bg;
-  color: @hover-fg;
-  background-size: 25%;
-  transition: all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682);
-  animation: gradient_f 20s ease-in infinite;
-  outline-style: none;
-}
-
-#lock {
-  background-image: image(
-    url("/usr/share/wlogout/icons/lock.png"),
-    url("/usr/local/share/wlogout/icons/lock.png")
-  );
-}
-
-#logout {
-  background-image: image(
-    url("/usr/share/wlogout/icons/logout.png"),
-    url("/usr/local/share/wlogout/icons/logout.png")
-  );
-}
-
-#suspend {
-  background-image: image(
-    url("/usr/share/wlogout/icons/suspend.png"),
-    url("/usr/local/share/wlogout/icons/suspend.png")
-  );
-}
-
-#hibernate {
-  background-image: image(
-    url("/usr/share/wlogout/icons/hibernate.png"),
-    url("/usr/local/share/wlogout/icons/hibernate.png")
-  );
+  color: transparent;
+  transition:
+    all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682),
+    box-shadow 0.5s ease-in;
 }
 
 #shutdown {
-  background-image: image(
-    url("/usr/share/wlogout/icons/shutdown.png"),
-    url("/usr/local/share/wlogout/icons/shutdown.png")
-  );
+  background-image: image(url("./icons/power.png"));
+}
+#shutdown:hover {
+  background-image: image(url("./icons/power-hover.png"));
+}
+
+#logout {
+  background-image: image(url("./icons/logout.png"));
+}
+#logout:hover {
+  background-image: image(url("./icons/logout-hover.png"));
 }
 
 #reboot {
-  background-image: image(
-    url("/usr/share/wlogout/icons/reboot.png"),
-    url("/usr/local/share/wlogout/icons/reboot.png")
-  );
+  background-image: image(url("./icons/restart.png"));
+}
+#reboot:hover {
+  background-image: image(url("./icons/restart-hover.png"));
+}
+
+#lock {
+  background-image: image(url("./icons/lock.png"));
+}
+#lock:hover {
+  background-image: image(url("./icons/lock-hover.png"));
+}
+
+#hibernate {
+  background-image: image(url("./icons/hibernate.png"));
+}
+#hibernate:hover {
+  background-image: image(url("./icons/hibernate-hover.png"));
 }
