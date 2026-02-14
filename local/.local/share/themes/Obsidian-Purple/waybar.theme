@@ -7,11 +7,11 @@ $HOME/.config/waybar/theme.css|/home/mateusdall/.local/share/scripts/startwaybar
 @define-color hover-bg rgba(92,75,125,0.4);
 @define-color hover-fg rgba(194,170,240,0.8);
 
-@define-color red #340987;
-@define-color orange #5A3A80;
-@define-color yellow #A38BC2;
-@define-color green #7D73B5;
-@define-color blue #6B5B90;
-@define-color purple #81549D;
-@define-color pink #C3AAF0;
-@define-color aqua #7D73B5;
+@define-color red    #8e4b5d;
+@define-color orange #a67c5e;
+@define-color yellow #b3a06a;
+@define-color green  #6c8a7e;
+@define-color blue   #6678a6;
+@define-color purple #81549d;
+@define-color pink   #c3aaf0;
+@define-color aqua   #78a6a2;

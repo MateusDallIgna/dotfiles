@@ -1,6 +1,7 @@
 configuration {
     font: "JetBrains Mono 12";
     show-icons: true;
+    case-sensitive: false;
 }
 
 @theme "~/.config/rofi/theme.rasi"
