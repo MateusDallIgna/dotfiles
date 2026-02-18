@@ -1,4 +1,4 @@
-$HOME/.config/waybar/theme.css|/home/mateusdall/.local/share/scripts/startwaybar.sh
+$HOME/.config/waybar/theme.css|$HOME/.local/share/scripts/startwaybar.sh
 @define-color bar-bg rgba(10,0,5,0);
 @define-color main-bg rgba(10,0,5,1);
 @define-color main-fg rgba(181,190,223,1);

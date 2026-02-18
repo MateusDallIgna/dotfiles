@@ -14,8 +14,8 @@ eval "$(zoxide init zsh)"
 export EDITOR="nvim"
 
 # Setup fzf
-if [[ ! "$PATH" == */home/mateus/.fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/home/mateus/.fzf/bin"
+if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
 fi
 
 source <(fzf --zsh)
@@ -58,4 +58,4 @@ if ! pgrep -u "$USER" ssh-agent > /dev/null; then
   ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
 fi
 
-export PATH=$PATH:/home/mateusdall/.spicetify
+export PATH=$PATH:$HOME/.spicetify
