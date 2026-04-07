@@ -1,22 +1,20 @@
-@define-color bar-bg rgba(19, 21, 26, 0.85);
 
-@define-color main-bg #13151a;
-@define-color main-fg #c0caf5;
+@define-color bar-bg rgba(0, 0, 0, 0.1);
 
-/* Ativo: Coral brilhante */
-@define-color active-bg #f7768e;
-@define-color active-fg #13151a;
+@define-color main-bg #11111b;
+@define-color main-fg #cdd6f4;
 
-/* Hover: Dourado Damasco */
-@define-color hover-bg #e0af68;
-@define-color hover-fg #13151a;
+@define-color active-bg #a6adc8;
+@define-color active-fg #313244;
 
-/* Cores da paleta Redux */
-@define-color red #f7768e;
-@define-color orange #ff9e64;
-@define-color yellow #e0af68;
-@define-color green #9ece6a;
-@define-color blue #7aa2f7;
-@define-color purple #bb9af7;
-@define-color pink #f7768e;
-@define-color aqua #89ddff;
+@define-color hover-bg #f5c2e7;
+@define-color hover-fg #313244;
+
+@define-color red #f38ba8;
+@define-color orange #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color blue #89b4fa;
+@define-color purple #cba6f7;
+@define-color pink #f5c2e7;
+@define-color aqua #94e2d5;
