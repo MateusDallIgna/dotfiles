@@ -1,0 +1,12 @@
+*.pem
+*.key
+*.pub
+known_hosts
+known_hosts.old
+.DS_Store
+*.swp
+*.swo
+*~
+*.bak
+__pycache__/
+node_modules/
