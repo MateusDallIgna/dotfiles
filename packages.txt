@@ -1,5 +1,5 @@
 7zip
-accountsservice
+accoxdg-user-dirs-updateuntsservice
 acl
 alsa-card-profiles
 alsa-firmware
@@ -188,7 +188,7 @@ net-tools
 netctl
 nettle
 network-manager-applet
-NetworkManager
+networkmanager-clat
 nfs-utils
 nfsidmap
 nftables
@@ -261,6 +261,7 @@ perl-www-robotrules
 perl-xml-parser
 perl-xml-writer
 pixman
+pipewire
 pkgconf
 pkgfile
 plocate
@@ -425,7 +426,7 @@ svt-hevc
 swappy
 swaylock-effects-git
 swaync
-swww
+awww
 sysfsutils
 systemd
 systemd-libs
@@ -585,3 +586,4 @@ zsh-theme-powerlevel10k-git
 zstd
 zvbi
 zxing-cpp
+opencode

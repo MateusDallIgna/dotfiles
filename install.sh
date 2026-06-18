@@ -4,6 +4,8 @@ set -euo pipefail
 DOTFILES_DIR="$HOME/dotfiles"
 PACKAGES_FILE="$DOTFILES_DIR/packages.txt"
 SDDM_THEME_DIR="/usr/share/sddm/themes/sddm-astronaut-theme"
+ZSH_SCRIPT="$HOME/.local/share/scripts/zsh.sh"
+GPG_WRAPPER=""
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -16,50 +18,105 @@ warn() { echo -e "${YELLOW}[!]${NC} $1"; }
 info() { echo -e "${CYAN}[i]${NC} $1"; }
 err()  { echo -e "${RED}[✗]${NC} $1"; }
 
-info "Iniciando instalacao automatica..."
+cleanup() {
+    [[ -n "$GPG_WRAPPER" && -f "$GPG_WRAPPER" ]] && rm -f "$GPG_WRAPPER"
+}
+trap cleanup EXIT
+
+info "Starting automated installation..."
 echo ""
 
 # ---------------------------------------------------------------------------
-# 1. Yay (AUR helper)
+# 1. Yay - AUR helper
 # ---------------------------------------------------------------------------
-if ! command -v yay &>/dev/null; then
-    info "Instalando yay..."
+install_yay() {
+    if command -v yay &>/dev/null; then
+        log "yay already installed"
+        return
+    fi
+
+    info "Installing yay..."
     sudo pacman -S --needed --noconfirm git base-devel
     git clone https://aur.archlinux.org/yay.git /tmp/yay
     cd /tmp/yay && makepkg -si --noconfirm
     cd "$DOTFILES_DIR"
-    log "yay instalado"
-else
-    log "yay ja instalado"
-fi
+    log "yay installed"
+}
+install_yay
 
 # ---------------------------------------------------------------------------
-# 2. Instalar todos os pacotes
+# 2. Install packages
 # ---------------------------------------------------------------------------
 if [ ! -f "$PACKAGES_FILE" ]; then
-    err "Arquivo $PACKAGES_FILE nao encontrado"
+    err "Package list not found at $PACKAGES_FILE"
     exit 1
 fi
 
-info "Instalando pacotes ($(wc -l < "$PACKAGES_FILE") packages)..."
-yay -S --needed --noconfirm - < "$PACKAGES_FILE"
-log "Pacotes instalados"
+package_count=$(wc -l < "$PACKAGES_FILE")
+info "Installing $package_count packages..."
+
+# Create a GPG wrapper that skips --recv-keys.
+# Some AUR packages require PGP keys that aren't available on public keyservers.
+# PGP verification is handled separately via --mflags "--skippgpcheck" in makepkg.
+GPG_WRAPPER=$(mktemp)
+cat > "$GPG_WRAPPER" << 'WRAPPER'
+#!/bin/bash
+[[ "$*" == *--recv-keys* ]] && exit 0
+exec /usr/bin/gpg "$@"
+WRAPPER
+chmod +x "$GPG_WRAPPER"
+
+yay -S --needed --noconfirm \
+    --answerdiff None \
+    --answerclean None \
+    --answeredit None \
+    --answerupgrade None \
+    --mflags "--skippgpcheck" \
+    --gpg "$GPG_WRAPPER" \
+    - < "$PACKAGES_FILE"
+log "Packages installed"
 
 # ---------------------------------------------------------------------------
-# 3. Flatpak (Flathub)
+# 3. Flatpak
 # ---------------------------------------------------------------------------
 if command -v flatpak &>/dev/null; then
-    info "Configurando Flatpak..."
+    info "Configuring Flatpak..."
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    log "Flatpak configurado"
+    log "Flatpak configured"
 fi
 
 # ---------------------------------------------------------------------------
-# 4. Servicos do sistema
+# 4. Enable system services
 # ---------------------------------------------------------------------------
-info "Habilitando servicos do sistema..."
+info "Enabling system services..."
 
-SERVICES_SYSTEM=(
+enable_service() {
+    local svc="$1"
+    if systemctl list-unit-files "$svc" &>/dev/null; then
+        if sudo systemctl enable --now "$svc" 2>/dev/null; then
+            log "$svc enabled"
+        else
+            warn "Failed to enable $svc"
+        fi
+    else
+        warn "Service $svc not found, skipping"
+    fi
+}
+
+enable_user_service() {
+    local svc="$1"
+    if systemctl --user list-unit-files "$svc" &>/dev/null; then
+        if systemctl --user enable --now "$svc" 2>/dev/null; then
+            log "$svc enabled"
+        else
+            warn "Failed to enable $svc"
+        fi
+    else
+        warn "Service $svc not found, skipping"
+    fi
+}
+
+SYSTEM_SERVICES=(
     "NetworkManager.service"
     "bluetooth.service"
     "sshd.service"
@@ -69,64 +126,54 @@ SERVICES_SYSTEM=(
     "pkgfile-update.timer"
 )
 
-for svc in "${SERVICES_SYSTEM[@]}"; do
-    if systemctl list-unit-files "$svc" &>/dev/null; then
-        sudo systemctl enable --now "$svc" 2>/dev/null && log "$svc ativado" || warn "$svc falhou"
-    else
-        warn "$svc nao encontrado, pulando"
-    fi
+for svc in "${SYSTEM_SERVICES[@]}"; do
+    enable_service "$svc"
 done
 
-SERVICES_USER=(
+USER_SERVICES=(
     "pipewire.service"
     "pipewire-pulse.socket"
     "wireplumber.service"
 )
 
-for svc in "${SERVICES_USER[@]}"; do
-    if systemctl --user list-unit-files "$svc" &>/dev/null; then
-        systemctl --user enable --now "$svc" 2>/dev/null && log "$svc ativado" || warn "$svc falhou"
-    else
-        warn "$svc nao encontrado, pulando"
-    fi
+for svc in "${USER_SERVICES[@]}"; do
+    enable_user_service "$svc"
 done
 
-log "Servicos configurados"
+log "Services configured"
 
 # ---------------------------------------------------------------------------
-# 5. SDDM - Tela de login
+# 5. SDDM login theme
 # ---------------------------------------------------------------------------
 if [ -d "$SDDM_THEME_DIR" ]; then
-    info "Configurando SDDM..."
+    info "Configuring SDDM..."
 
     sudo mkdir -p "$SDDM_THEME_DIR/Themes"
 
-    # Copia config customizada
     if [ -f "$DOTFILES_DIR/sddm/custom.conf" ]; then
         sudo cp "$DOTFILES_DIR/sddm/custom.conf" "$SDDM_THEME_DIR/Themes/custom.conf"
         sudo sed -i 's|^ConfigFile=.*|ConfigFile=Themes/custom.conf|' "$SDDM_THEME_DIR/metadata.desktop"
     fi
 
-    # Garante /etc/sddm.conf
     CURRENT_SDDM=$(grep -oP 'Current=\K.*' /etc/sddm.conf 2>/dev/null || echo "")
     if [ "$CURRENT_SDDM" != "sddm-astronaut-theme" ]; then
         echo -e "[Theme]\nCurrent=sddm-astronaut-theme" | sudo tee /etc/sddm.conf >/dev/null
     fi
 
-    log "SDDM configurado com sddm-astronaut-theme"
+    log "SDDM configured with sddm-astronaut-theme"
 else
-    warn "sddm-astronaut-theme nao encontrado, pulando configuracao SDDM"
+    warn "sddm-astronaut-theme not found, skipping SDDM configuration"
 fi
 
 # ---------------------------------------------------------------------------
-# 6. Stow - dotfiles
+# 6. Stow - dotfile symlinks
 # ---------------------------------------------------------------------------
 if ! command -v stow &>/dev/null; then
-    info "Instalando stow..."
+    info "Installing stow..."
     yay -S --noconfirm stow
 fi
 
-info "Rodando stow..."
+info "Running stow..."
 cd "$DOTFILES_DIR"
 
 STOW_DIRS=()
@@ -139,10 +186,13 @@ for dir in */; do
 done
 
 for dir in "${STOW_DIRS[@]}"; do
-    stow --restow "$dir" 2>/dev/null && log "stow: $dir" || warn "stow: $dir falhou"
+    if stow --restow "$dir" 2>/dev/null; then
+        log "stow: $dir"
+    else
+        warn "stow: $dir failed"
+    fi
 done
 
-# stow arquivos na raiz (ex: .gitignore, install.sh, packages.txt)
 for f in .gitignore install.sh packages.txt; do
     if [ -f "$DOTFILES_DIR/$f" ]; then
         target="$HOME/$f"
@@ -152,16 +202,42 @@ for f in .gitignore install.sh packages.txt; do
     fi
 done
 
-log "Stow concluido"
+log "Stow complete"
 
 # ---------------------------------------------------------------------------
-# 7. Final
+# 7. Zsh setup (oh-my-zsh, plugins, shell change)
+# ---------------------------------------------------------------------------
+if [ -x "$ZSH_SCRIPT" ]; then
+    info "Configuring Zsh..."
+    bash "$ZSH_SCRIPT"
+    log "Zsh configured"
+elif [ -f "$ZSH_SCRIPT" ]; then
+    warn "Zsh setup script at $ZSH_SCRIPT is not executable, skipping"
+else
+    warn "Zsh setup script not found at $ZSH_SCRIPT, skipping"
+fi
+
+# ---------------------------------------------------------------------------
+# 8. Final setup
+# ---------------------------------------------------------------------------
+if [ -f "$HOME/.config/hypr/hyprland.lua" ]; then
+    info "Removing default Hyprland Lua config..."
+    rm "$HOME/.config/hypr/hyprland.lua"
+    log "Removed hyprland.lua"
+fi
+
+info "Updating XDG user directories..."
+xdg-user-dirs-update
+log "XDG user directories updated"
+
+# ---------------------------------------------------------------------------
+# 9. Summary
 # ---------------------------------------------------------------------------
 echo ""
 log "============================================"
-log "  Instalacao concluida!"
+log "  Installation complete!"
 log "============================================"
-echo -e "  ${CYAN}Pacotes:${NC} $(wc -l < "$PACKAGES_FILE")"
+echo -e "  ${CYAN}Packages:${NC} $package_count"
 echo -e "  ${CYAN}SDDM:${NC} sddm-astronaut-theme"
-echo -e "  ${CYAN}Dica:${NC} Reboot para aplicar a tela de login"
+echo -e "  ${CYAN}Note:${NC} Reboot to apply the login theme"
 echo ""

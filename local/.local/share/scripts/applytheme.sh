@@ -53,7 +53,7 @@ fi
 ## Set the last wallpaper used in the theme
 if [ -f $THEME_DIR/wall.set ]; then
     WALLPAPER_NAME=$(head -n1 $THEME_DIR/wall.set) 
-    swww img -t center --transition-duration 3 --transition-fps 60 "$THEME_DIR/wallpapers/$WALLPAPER_NAME"
+    awww img -t center --transition-duration 3 --transition-fps 60 "$THEME_DIR/wallpapers/$WALLPAPER_NAME"
     ## Set rofi background
     cp "$THEME_DIR/wallpapers/$WALLPAPER_NAME" $HOME/.config/rofi/backgrounds/current_wallpaper.png
     
