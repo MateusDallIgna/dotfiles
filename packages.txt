@@ -587,3 +587,5 @@ zstd
 zvbi
 zxing-cpp
 opencode
+hyprshot
+satty
