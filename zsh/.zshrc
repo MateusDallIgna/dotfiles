@@ -1,4 +1,8 @@
 PATH=$PATH:$HOME/.local/share/scripts
+if [[ -z "$TMUX" ]] && [[ -z "$SSH_CONNECTION" ]] && [[ -z "$SSH_CLIENT" ]]; then
+  tmux new-session -A -s main
+fi
+
 # Path to your oh-my-zsh installation.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -59,3 +63,5 @@ if ! pgrep -u "$USER" ssh-agent > /dev/null; then
 fi
 
 export PATH=$PATH:$HOME/.spicetify
+
+alias tm='tmux new-session -A -s main'
