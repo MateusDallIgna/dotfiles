@@ -6,7 +6,7 @@ $HOME/.config/waybar/theme.css|$HOME/.local/share/scripts/startwaybar.sh
 
 /* Ativo: Coral brilhante */
 @define-color active-bg #f7768e;
-@define-color active-fg #13151a;
+@define-color active-fg #1e2129;
 
 /* Hover: Dourado Damasco */
 @define-color hover-bg #e0af68;

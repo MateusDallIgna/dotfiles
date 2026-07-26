@@ -590,3 +590,4 @@ zxing-cpp
 opencode
 hyprshot
 satty
+waybar-weather

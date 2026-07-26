@@ -90,7 +90,6 @@
   },
 
   "network": {
-    "interface": "wlan0",
     "format": "{ifname}",
     "format-wifi": "{essid} ",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",

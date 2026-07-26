@@ -5,7 +5,7 @@ $HOME/.config/waybar/theme.css|$HOME/.local/share/scripts/startwaybar.sh
 @define-color main-fg #d3c6aa;
 
 @define-color active-bg #a7c080;
-@define-color active-fg #272e33;
+@define-color active-fg #323b41;
 
 @define-color hover-bg #dbbc7f;
 @define-color hover-fg #272e33;

@@ -7,36 +7,24 @@ configuration {
 @theme "~/.config/rofi/theme.rasi"
 
 window {
-    width:            1200px;
-    height:           500px; 
-    border-radius:    15px;
+    width:            100%;
+    height:           40%; 
+    border-radius:    0px;
     border:           2px;
-    border-color:     @border;
-    background-color: @background;
+    background-color: #1E1D2E66;
     padding:          0px;
 }
 
 mainbox {
-    background-color: @background;
+    background-color: transparent;
     border:           0px;
     spacing:          0px;
     padding:          0px;
-    children:         [ "inputbar", "listview" ];
-}
-
-inputbar {
-    border:           1px;
-    margin:           15px;
-    padding:          10px;
-    border-radius:    10px;
-    children:         [ "textbox-prompt-colon", "entry" ];
-    text-color:       @foreground;
-    border-color:     @foreground;
-    background-color: @background;
+    children:         [ "listview" ];
 }
 
 listview {
-    columns:          3;
+    columns:          9;
     lines:            1;
     cycle:            true;
     dynamic:          true;
@@ -45,46 +33,41 @@ listview {
     spacing:          0px;
     padding:          0px;
     margin:           0px;
-    background-color: @background;
+    background-color: transparent;
     fixed-height:     true;
 }
 
 element {
     orientation:      vertical;
-    padding:          10px 0px;
+    padding:          10px 3px;
     spacing:          10px 0px;
-    background-color: @background-alt;
+    background-color: transparent;
     text-color:       @foreground;
     margin:           10px;
-    border-radius:    10px;
+    border-radius:    20px;
 }
 
 element selected {
     background-color: @selected-background;
-    text-color:       @selected-foreground;
-    border-radius:    10px;
+    border-radius:    20px;
 }
 
 element-icon {
-    size:             350px;
+    size:             34%;
     horizontal-align: 0.5;
     background-color: transparent;
     cursor:           inherit;
+    border-radius:    50px;
 }
 
 element-text {
-    enabled: false;
+    enabled: true;
+    background-color: transparent;
+    text-color: @foreground;
+    horizontal-align: 0.5;
 }
 
-textbox-prompt-colon {
-    expand:           false;
-    str:              "   ";
-    text-color:       inherit;
-    background-color: transparent;
+element-text selected{
+    text-color:       @selected-foreground;
 }
 
-entry {
-    background-color: transparent;
-    text-color:       inherit;
-    placeholder:      "Search Wallpapers...";
-}

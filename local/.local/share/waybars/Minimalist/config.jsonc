@@ -100,7 +100,6 @@
   },
 
   "network": {
-    "interface": "wlan0",
     "format": "{ifname}",
     "format-wifi": "",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
@@ -113,7 +112,7 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "{icon} {volume}%",
     "format-muted": "",
     "format-icons": {
       "headphone": "",
