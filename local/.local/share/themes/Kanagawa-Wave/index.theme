@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Kanagawa-Wave-Dark
+Comment=Dark theme inspired by The Great Wave off Kanagawa
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Kanagawa-Wave-Dark
+MetacityTheme=Kanagawa-Wave-Dark
+IconTheme=Tela-circle-dracula
+CursorTheme=Kanagawa-cursors
+ButtonLayout=close,minimize,maximize:menu

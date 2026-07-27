@@ -1,0 +1,20 @@
+$HOME/.config/waybar/theme.css|$HOME/.local/share/scripts/startwaybar.sh
+@define-color bar-bg rgba(0, 0, 0, 0.1);
+
+@define-color main-bg #16161D;
+@define-color main-fg #DCD7BA;
+
+@define-color active-bg #7E9CD8;
+@define-color active-fg #16161D;
+
+@define-color hover-bg #957FB8;
+@define-color hover-fg #16161D;
+
+@define-color red #C34043;
+@define-color orange #E6C384;
+@define-color yellow #C0A36E;
+@define-color green #76946A;
+@define-color blue #7E9CD8;
+@define-color purple #957FB8;
+@define-color pink #D27E99;
+@define-color aqua #6A9589;

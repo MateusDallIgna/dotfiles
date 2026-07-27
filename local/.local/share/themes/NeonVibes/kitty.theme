@@ -1,3 +1,4 @@
+$HOME/.config/kitty/theme.conf|killall -SIGUSR1 kitty
 
 ## name:     NeonVibes
 ## blurb:    Dark cyan & pink neon theme
