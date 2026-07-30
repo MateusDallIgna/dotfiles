@@ -66,3 +66,19 @@ cp -r "$THEME_DIR/gtk-4.0" $HOME/.config/
 
 echo "$THEME_NAME" > $HOME/.cache/current_theme.txt
 
+# Pre-load the wallpapers for the theme switcher
+
+WALLPAPER_PATH=$HOME/.local/share/themes/$1/wallpapers
+
+cd "$WALLPAPER_PATH" || exit
+
+CACHE_DIR="/tmp/rofi-wp-cache/$1"
+mkdir -p "$CACHE_DIR"
+
+SELECTED_WALLPAPER=$(for theme in *.jpg *.png *.gif; do
+    thumb="$CACHE_DIR/${theme%.*}.png"
+    if [ "$theme" -nt "$thumb" ]; then
+        convert "$theme" -resize x500 -gravity center -crop 340x500+0+0 +repage "$thumb"
+    fi
+    echo -en "$theme\0icon\x1f$thumb\n"
+done | echo "bla" )

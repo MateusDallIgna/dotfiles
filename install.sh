@@ -143,7 +143,32 @@ done
 log "Services configured"
 
 # ---------------------------------------------------------------------------
-# 5. SDDM login theme
+# 5. v4l2loopback - auto-load at boot with exclusive_caps for Chromium
+# ---------------------------------------------------------------------------
+info "Configuring v4l2loopback..."
+
+V4L2LOOPBACK_CONF="/etc/modprobe.d/v4l2loopback.conf"
+if [ ! -f "$V4L2LOOPBACK_CONF" ]; then
+    echo 'options v4l2loopback exclusive_caps=1 devices=1 video_nr=0 card_label="OBS Virtual Camera" max_buffers=2' | \
+        sudo tee "$V4L2LOOPBACK_CONF" > /dev/null
+    log "Created $V4L2LOOPBACK_CONF"
+fi
+
+V4L2LOOPBACK_LOAD="/etc/modules-load.d/v4l2loopback.conf"
+if [ ! -f "$V4L2LOOPBACK_LOAD" ]; then
+    echo "v4l2loopback" | sudo tee "$V4L2LOOPBACK_LOAD" > /dev/null
+    log "Created $V4L2LOOPBACK_LOAD"
+fi
+
+if ! lsmod | grep -q v4l2loopback; then
+    sudo modprobe v4l2loopback
+    log "Loaded v4l2loopback module"
+fi
+
+log "v4l2loopback configured"
+
+# ---------------------------------------------------------------------------
+# 6. SDDM login theme
 # ---------------------------------------------------------------------------
 if [ -d "$SDDM_THEME_DIR" ]; then
     info "Configuring SDDM..."
@@ -166,7 +191,7 @@ else
 fi
 
 # ---------------------------------------------------------------------------
-# 6. Stow - dotfile symlinks
+# 7. Stow - dotfile symlinks
 # ---------------------------------------------------------------------------
 if ! command -v stow &>/dev/null; then
     info "Installing stow..."
@@ -205,7 +230,7 @@ done
 log "Stow complete"
 
 # ---------------------------------------------------------------------------
-# 7. Zsh setup (oh-my-zsh, plugins, shell change)
+# 8. Zsh setup (oh-my-zsh, plugins, shell change)
 # ---------------------------------------------------------------------------
 if [ -x "$ZSH_SCRIPT" ]; then
     info "Configuring Zsh..."
@@ -218,7 +243,7 @@ else
 fi
 
 # ---------------------------------------------------------------------------
-# 8. Final setup
+# 9. Final setup
 # ---------------------------------------------------------------------------
 if [ -f "$HOME/.config/hypr/hyprland.lua" ]; then
     info "Removing default Hyprland Lua config..."
@@ -231,7 +256,7 @@ xdg-user-dirs-update
 log "XDG user directories updated"
 
 # ---------------------------------------------------------------------------
-# 9. Summary
+# 10. Summary
 # ---------------------------------------------------------------------------
 echo ""
 log "============================================"

@@ -60,7 +60,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts("Navigate Buffer Previous"))
 -- -------------------------------------------------------------------------------------------
 
 keymap("n", "<leader>sv", "<cmd>vsplit<cr>", opts("Split Vertical"))
-keymap("n", "<leader>sh", "<cmd>split<cr>", opts("Split Horizontal"))
+keymap("n", "<leader>sS", "<cmd>split<cr>", opts("Split Horizontal"))
 keymap("n", "<leader>sq", "<cmd>close<cr>", opts("Close Split"))
 
 -- -------------------------------------------------------------------------------------------

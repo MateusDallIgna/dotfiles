@@ -1,0 +1,52 @@
+onboarding = false
+
+[theme]
+name = "catppuccin"
+
+[theme.custom]
+accent = "#cba6f7"
+
+[keys]
+prefix = "ctrl+space"
+
+new_tab = "prefix+n"
+rename_tab = "prefix+,"
+rename_workspace = "prefix+shift+w"
+detach = "prefix+d"
+new_workspace = "prefix+shift+n"
+workspace_picker = "prefix+w"
+goto = "prefix+g"
+next_tab = "prefix+e"
+previous_tab = "prefix+shift+b"
+switch_tab = "prefix+1..9"
+previous_workspace = "prefix+("
+next_workspace = "prefix+)"
+close_tab = "prefix+shift+q"
+split_vertical = "prefix+v"
+split_horizontal = "prefix+s"
+close_pane = "prefix+q"
+zoom = "prefix+z"
+resize_mode = "prefix+r"
+toggle_sidebar = "prefix+b"
+
+focus_pane_left = "alt+h"
+focus_pane_down = "alt+j"
+focus_pane_up = "alt+k"
+focus_pane_right = "alt+l"
+
+[[keys.command]]
+key = "prefix+shift+f"
+type = "pane"
+command = "fzf"
+
+[[keys.command]]
+key = "prefix+shift+l"
+type = "pane"
+command = "lazygit"
+
+[ui]
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = true
+
+[session]
+resume_agents_on_restore = true

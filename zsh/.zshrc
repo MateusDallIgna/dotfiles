@@ -1,7 +1,8 @@
 PATH=$PATH:$HOME/.local/share/scripts
-if [[ -z "$TMUX" ]] && [[ -z "$SSH_CONNECTION" ]] && [[ -z "$SSH_CLIENT" ]]; then
-  tmux new-session -A -s main
-fi
+
+# if [[ -z "$TMUX" ]] && [[ -z "$SSH_CONNECTION" ]] && [[ -z "$SSH_CLIENT" ]]; then
+#   tmux new-session -A -s main
+# fi
 
 # Path to your oh-my-zsh installation.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -36,6 +37,8 @@ alias ls='eza -1 --icons=auto' # short list
 alias cd='z'
 alias cat='bat'
 alias top='btop'
+alias h='herdr'
+alias t='tmux'
 
 # Directory navigation shortcuts
 alias ..='cd ..'
