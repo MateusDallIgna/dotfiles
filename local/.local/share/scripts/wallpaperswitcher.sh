@@ -1,5 +1,7 @@
 #!/bin/bash
 
+shopt -s nullglob
+
 CWD=$(pwd)
 
 CURRENT_THEME="$(head -n 1 ~/.cache/current_theme.txt)"
@@ -10,10 +12,14 @@ cd "$WALLPAPER_PATH" || exit
 CACHE_DIR="/tmp/rofi-wp-cache/$CURRENT_THEME"
 mkdir -p "$CACHE_DIR"
 
-SELECTED_WALLPAPER=$(for theme in *.jpg *.png *.gif; do
+SELECTED_WALLPAPER=$(for theme in *.jpg *.jpeg *.png *.gif; do
+    case "$(file -b --mime-type "$theme")" in
+        image/*) ;;
+        *) continue ;;
+    esac
     thumb="$CACHE_DIR/${theme%.*}.png"
-    if [ "$theme" -nt "$thumb" ]; then
-        convert "$theme" -resize x500 -gravity center -crop 340x500+0+0 +repage "$thumb"
+    if [ ! -f "$thumb" ] || [ "$theme" -nt "$thumb" ]; then
+        convert "$theme" -resize x500 -gravity center -crop 340x500+0+0 +repage "$thumb" 2>/dev/null
     fi
     echo -en "$theme\0icon\x1f$thumb\n"
 done | rofi -i -dmenu -p "" -theme ~/.config/rofi/styles/wallpaperluncher.rasi)

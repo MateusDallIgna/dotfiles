@@ -68,6 +68,8 @@ echo "$THEME_NAME" > $HOME/.cache/current_theme.txt
 
 # Pre-load the wallpapers for the theme switcher
 
+shopt -s nullglob
+
 WALLPAPER_PATH=$HOME/.local/share/themes/$1/wallpapers
 
 cd "$WALLPAPER_PATH" || exit
@@ -75,10 +77,13 @@ cd "$WALLPAPER_PATH" || exit
 CACHE_DIR="/tmp/rofi-wp-cache/$1"
 mkdir -p "$CACHE_DIR"
 
-SELECTED_WALLPAPER=$(for theme in *.jpg *.png *.gif; do
+for theme in *.jpg *.jpeg *.png *.gif; do
+    case "$(file -b --mime-type "$theme")" in
+        image/*) ;;
+        *) continue ;;
+    esac
     thumb="$CACHE_DIR/${theme%.*}.png"
-    if [ "$theme" -nt "$thumb" ]; then
-        convert "$theme" -resize x500 -gravity center -crop 340x500+0+0 +repage "$thumb"
+    if [ ! -f "$thumb" ] || [ "$theme" -nt "$thumb" ]; then
+        convert "$theme" -resize x500 -gravity center -crop 340x500+0+0 +repage "$thumb" 2>/dev/null
     fi
-    echo -en "$theme\0icon\x1f$thumb\n"
-done | echo "bla" )
+done

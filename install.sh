@@ -120,7 +120,6 @@ SYSTEM_SERVICES=(
     "NetworkManager.service"
     "bluetooth.service"
     "sshd.service"
-    "sddm.service"
     "firewalld.service"
     "reflector.timer"
     "pkgfile-update.timer"
@@ -170,14 +169,29 @@ log "v4l2loopback configured"
 # ---------------------------------------------------------------------------
 # 6. SDDM login theme
 # ---------------------------------------------------------------------------
+if [ ! -d "$SDDM_THEME_DIR" ]; then
+    info "Cloning sddm-astronaut-theme..."
+    if sudo git clone -b master --depth 1 \
+        https://github.com/Keyitdev/sddm-astronaut-theme.git \
+        "$SDDM_THEME_DIR"; then
+        log "sddm-astronaut-theme cloned"
+    else
+        warn "Failed to clone sddm-astronaut-theme, skipping SDDM configuration"
+    fi
+fi
+
 if [ -d "$SDDM_THEME_DIR" ]; then
     info "Configuring SDDM..."
 
-    sudo mkdir -p "$SDDM_THEME_DIR/Themes"
+    if [ -d "$SDDM_THEME_DIR/Fonts" ]; then
+        sudo cp -r "$SDDM_THEME_DIR/Fonts"/* /usr/share/fonts/
+        sudo fc-cache -f >/dev/null
+        log "SDDM theme fonts installed"
+    fi
 
     if [ -f "$DOTFILES_DIR/sddm/custom.conf" ]; then
-        sudo cp "$DOTFILES_DIR/sddm/custom.conf" "$SDDM_THEME_DIR/Themes/custom.conf"
-        sudo sed -i 's|^ConfigFile=.*|ConfigFile=Themes/custom.conf|' "$SDDM_THEME_DIR/metadata.desktop"
+        sudo cp "$DOTFILES_DIR/sddm/custom.conf" "$SDDM_THEME_DIR/Themes/astronaut.conf"
+        sudo sed -i 's|^ConfigFile=.*|ConfigFile=Themes/astronaut.conf|' "$SDDM_THEME_DIR/metadata.desktop"
     fi
 
     CURRENT_SDDM=$(grep -oP 'Current=\K.*' /etc/sddm.conf 2>/dev/null || echo "")
@@ -185,9 +199,13 @@ if [ -d "$SDDM_THEME_DIR" ]; then
         echo -e "[Theme]\nCurrent=sddm-astronaut-theme" | sudo tee /etc/sddm.conf >/dev/null
     fi
 
+    if sudo systemctl enable --now sddm.service; then
+        log "sddm.service enabled"
+    else
+        warn "Failed to enable sddm.service"
+    fi
+
     log "SDDM configured with sddm-astronaut-theme"
-else
-    warn "sddm-astronaut-theme not found, skipping SDDM configuration"
 fi
 
 # ---------------------------------------------------------------------------

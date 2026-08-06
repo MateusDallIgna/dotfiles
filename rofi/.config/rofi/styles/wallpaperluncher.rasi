@@ -1,73 +1,71 @@
 configuration {
-    font: "JetBrains Mono 12";
-    show-icons: true;
-    case-sensitive: false;
+    font:                       "JetBrainsMono Nerd Font Propo 12";
+    show-icons:                    true;
+    case-sensitive:            false;
 }
 
 @theme "~/.config/rofi/theme.rasi"
 
 window {
-    width:            100%;
-    height:           40%; 
-    border-radius:    0px;
-    border:           2px;
-    background-color: #1E1D2E66;
-    padding:          0px;
+    width:                   100%;
+    location:                  center;
+    anchor:                  center;
+    padding:                  0.5em;
+    border:                  1px;
+    border-radius:              15px;
+    background-color:    #1E1D2E66;
 }
 
 mainbox {
-    background-color: transparent;
-    border:           0px;
-    spacing:          0px;
-    padding:          0px;
-    children:         [ "listview" ];
+    padding:                     0px;
+    spacing:                0px;
+    background-color:   transparent;
+    children:           [ "listview" ];
 }
 
 listview {
-    columns:          9;
-    lines:            1;
-    cycle:            true;
-    dynamic:          true;
-    scrollbar:        false;
-    layout:           vertical;
-    spacing:          0px;
-    padding:          0px;
-    margin:           0px;
-    background-color: transparent;
-    fixed-height:     true;
+    columns:               5;
+    lines:                  1;
+    cycle:                 true;
+    dynamic:             false;
+    scrollbar:           false;
+    layout:              vertical;
+    spacing:               0.5em;
+    padding:               0.5em;
+    background-color:   transparent;
 }
 
 element {
-    orientation:      vertical;
-    padding:          10px 3px;
-    spacing:          10px 0px;
-    background-color: transparent;
-    text-color:       @foreground;
-    margin:           10px;
-    border-radius:    20px;
+    orientation:           vertical;
+    padding:               0.7em;
+    spacing:               0.7em;
+    margin:                  0px;
+    border-radius:             20px;
+    background-color:    transparent;
+    text-color:          @foreground;
 }
 
 element selected {
     background-color: @selected-background;
-    border-radius:    20px;
+    border-radius:     20px;
 }
 
 element-icon {
-    size:             34%;
-    horizontal-align: 0.5;
-    background-color: transparent;
-    cursor:           inherit;
-    border-radius:    50px;
+    size:                      20em;
+    horizontal-align:            0.5;
+    background-color:            transparent;
+    text-color:           inherit;
+    border-radius:                 20px;
+    cursor:               inherit;
 }
 
 element-text {
-    enabled: true;
+    enabled:                  true;
     background-color: transparent;
-    text-color: @foreground;
-    horizontal-align: 0.5;
+    text-color:           inherit;
+    horizontal-align:      0.5;
 }
 
-element-text selected{
-    text-color:       @selected-foreground;
+element-text selected {
+    text-color:               @selected-foreground;
 }
-

@@ -1,3 +1,6 @@
+herdr
+sddm
+kitty
 v4l2loopback-dkms
 v4l2loopback-utils
 wl-clip-persist
@@ -192,7 +195,6 @@ net-tools
 netctl
 nettle
 network-manager-applet
-networkmanager-clat
 nfs-utils
 nfsidmap
 nftables
@@ -215,7 +217,6 @@ oniguruma
 openal
 openssh
 openssl
-opentabletdriver
 orc
 os-prober
 ostree
