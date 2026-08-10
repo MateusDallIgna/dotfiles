@@ -4,19 +4,18 @@
     {
       "id": "w1",
       "custom_name": null,
-      "identity_cwd": "/home/mateusdalligna/Downloads",
+      "identity_cwd": "/home/mateusdalligna/dotfiles",
       "public_pane_numbers": {
-        "2": 8,
-        "1": 4,
-        "3": 9
+        "1": 9,
+        "4": 13,
+        "2": 11
       },
-      "next_public_pane_number": 11,
+      "next_public_pane_number": 14,
       "public_tab_numbers": [
-        1,
-        5,
-        6
+        6,
+        7
       ],
-      "next_public_tab_number": 7,
+      "next_public_tab_number": 8,
       "tabs": [
         {
           "custom_name": null,
@@ -25,7 +24,7 @@
           },
           "panes": {
             "1": {
-              "cwd": "/home/mateusdalligna/Downloads"
+              "cwd": "/home/mateusdalligna/dotfiles"
             }
           },
           "zoomed": false,
@@ -35,30 +34,28 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 2
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 2
+              },
+              "second": {
+                "Pane": 4
+              }
+            }
           },
           "panes": {
+            "4": {
+              "cwd": "/home/mateusdalligna/dotfiles/local/.local/share/themes/Crimson-Blue"
+            },
             "2": {
-              "cwd": "/home/mateusdalligna/Documentos/Playground"
+              "cwd": "/home/mateusdalligna"
             }
           },
           "zoomed": false,
           "focused": 2,
           "root_pane": 2
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 3
-          },
-          "panes": {
-            "3": {
-              "cwd": "/home/mateusdalligna/dotfiles/rofi/.config/rofi/styles"
-            }
-          },
-          "zoomed": false,
-          "focused": 3,
-          "root_pane": 3
         }
       ],
       "active_tab": 1
