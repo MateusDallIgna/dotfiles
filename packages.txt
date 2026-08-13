@@ -1,3 +1,5 @@
+hyprlock
+glava
 herdr
 sddm
 kitty
