@@ -4,18 +4,20 @@
     {
       "id": "w1",
       "custom_name": null,
-      "identity_cwd": "/home/mateusdalligna/dotfiles",
+      "identity_cwd": "/home/mateusdalligna/Documentos/BigProjects",
       "public_pane_numbers": {
-        "1": 9,
-        "4": 13,
-        "2": 11
+        "1": 13,
+        "3": 21,
+        "2": 16,
+        "5": 23
       },
-      "next_public_pane_number": 14,
+      "next_public_pane_number": 24,
       "public_tab_numbers": [
-        6,
-        7
+        7,
+        8,
+        9
       ],
-      "next_public_tab_number": 8,
+      "next_public_tab_number": 10,
       "tabs": [
         {
           "custom_name": null,
@@ -24,7 +26,7 @@
           },
           "panes": {
             "1": {
-              "cwd": "/home/mateusdalligna/dotfiles"
+              "cwd": "/home/mateusdalligna/Documentos/BigProjects"
             }
           },
           "zoomed": false,
@@ -34,31 +36,45 @@
         {
           "custom_name": null,
           "layout": {
-            "Split": {
-              "direction": "Vertical",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 2
-              },
-              "second": {
-                "Pane": 4
-              }
-            }
+            "Pane": 2
           },
           "panes": {
-            "4": {
-              "cwd": "/home/mateusdalligna/dotfiles/local/.local/share/themes/Crimson-Blue"
-            },
             "2": {
-              "cwd": "/home/mateusdalligna"
+              "cwd": "/home/mateusdalligna/Documentos/Workspace/Prolog"
             }
           },
           "zoomed": false,
           "focused": 2,
           "root_pane": 2
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 3
+              },
+              "second": {
+                "Pane": 5
+              }
+            }
+          },
+          "panes": {
+            "5": {
+              "cwd": "/home/mateusdalligna/dotfiles/hypr/.config/hypr"
+            },
+            "3": {
+              "cwd": "/home/mateusdalligna/dotfiles/hypr/.config/hypr"
+            }
+          },
+          "zoomed": false,
+          "focused": 5,
+          "root_pane": 3
         }
       ],
-      "active_tab": 1
+      "active_tab": 2
     }
   ],
   "active": 0,

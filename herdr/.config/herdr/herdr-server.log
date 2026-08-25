@@ -463,3 +463,300 @@
 2026-08-10T23:01:30.743420Z  INFO herdr::server::headless: client resize client_id=2 cols=88 rows=39 cell_width_px=0 cell_height_px=0
 2026-08-10T23:01:34.852419Z  INFO herdr::server::headless: client resize client_id=2 cols=185 rows=42 cell_width_px=0 cell_height_px=0
 2026-08-10T23:03:01.933672Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-08-17T22:51:52.662017Z  INFO herdr::api::server: api server listening path=/home/mateusdalligna/.config/herdr/herdr.sock
+2026-08-17T22:51:52.664664Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-17T22:51:52.666340Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=4453
+2026-08-17T22:51:52.666687Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-17T22:51:52.668148Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=4456
+2026-08-17T22:51:52.668498Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-17T22:51:52.669726Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=4459
+2026-08-17T22:51:52.670781Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-08-17T22:51:52.670804Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-17T22:51:52.785970Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-17T22:51:52.789406Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/mateusdalligna
+2026-08-17T22:51:52.789574Z  INFO herdr::server::headless: client protocol socket listening path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-17T22:51:52.789609Z  INFO herdr::server::headless: herdr server started api_socket=/home/mateusdalligna/.config/herdr/herdr.sock client_socket=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-17T22:51:52.789878Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=4435
+2026-08-17T22:51:52.831546Z  INFO herdr::server::headless: client connected client_id=2 cols=183 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-17T22:51:54.490738Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: None }"
+2026-08-17T22:51:54.494404Z  INFO herdr::pane: pane session terminated pane=2 pid=4456 signal=Hangup
+2026-08-17T22:51:54.494687Z  WARN herdr::app::actions: PaneDied for unknown pane pane=2
+2026-08-17T22:51:54.503180Z  INFO herdr::logging: update available event="update.available" subsystem="update" outcome="ok" version="0.8.0"
+2026-08-17T22:51:54.503208Z  INFO herdr::update: new stable build available at https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64
+2026-08-17T22:51:54.503594Z  INFO herdr::update: auto-update check: 0.8.0 available, waiting for explicit install
+2026-08-17T22:51:57.901547Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-17T22:51:58.890127Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="qwen"
+2026-08-17T22:52:02.904555Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-17T22:52:17.558238Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-08-20T21:41:02.009099Z  INFO herdr::api::server: api server listening path=/home/mateusdalligna/.config/herdr/herdr.sock
+2026-08-20T21:41:02.011014Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-20T21:41:02.011795Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=7193
+2026-08-20T21:41:02.012057Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-20T21:41:02.012758Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=7196
+2026-08-20T21:41:02.012978Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-08-20T21:41:02.012988Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-20T21:41:02.076979Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-20T21:41:02.078593Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/mateusdalligna/.config
+2026-08-20T21:41:02.078687Z  INFO herdr::server::headless: client protocol socket listening path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-20T21:41:02.078713Z  INFO herdr::server::headless: herdr server started api_socket=/home/mateusdalligna/.config/herdr/herdr.sock client_socket=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-20T21:41:02.078953Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=7175
+2026-08-20T21:41:02.113579Z  INFO herdr::server::headless: client connected client_id=2 cols=183 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-20T21:41:02.486318Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="qwen"
+2026-08-20T21:41:02.716236Z  INFO herdr::logging: update available event="update.available" subsystem="update" outcome="ok" version="0.8.2"
+2026-08-20T21:41:02.716258Z  INFO herdr::update: new stable build available at https://github.com/herdrdev/herdr/releases/download/v0.8.2/herdr-linux-x86_64
+2026-08-20T21:41:02.716452Z  INFO herdr::update: auto-update check: 0.8.2 available, waiting for explicit install
+2026-08-20T21:41:10.385804Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t7"
+2026-08-20T21:41:11.274118Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:41:16.276430Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T21:41:18.120657Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(7685)
+2026-08-20T21:41:33.785981Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t7"
+2026-08-20T21:41:38.787784Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T21:41:43.866774Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:41:48.580931Z  INFO herdr::pane: agent changed pane=1 previous_agent=Some(OpenCode) agent=None pgid=Some(7193)
+2026-08-20T21:41:48.906208Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T21:44:13.141632Z  INFO herdr::server::headless: client resize client_id=2 cols=88 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T21:48:39.481774Z  INFO herdr::server::headless: client resize client_id=2 cols=185 rows=42 cell_width_px=0 cell_height_px=0
+2026-08-20T21:48:41.754023Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=41 cols=181 scrollback_limit_bytes=10000000
+2026-08-20T21:48:41.755361Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=10362
+2026-08-20T21:48:41.755517Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:48:42.882235Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=4 rows=41 cols=91 scrollback_limit_bytes=10000000
+2026-08-20T21:48:42.884130Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=4 pid=10460
+2026-08-20T21:48:42.884294Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:48:45.634255Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:48:48.823572Z  INFO herdr::pane: agent changed pane=3 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(10634)
+2026-08-20T21:48:50.636080Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T21:48:54.586505Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:48:59.589205Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T21:49:01.259082Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:49:01.594506Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:49:03.002856Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:49:05.058857Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:49:05.579149Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:49:10.581004Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T21:49:28.396355Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-20T21:49:29.223076Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: None }"
+2026-08-20T21:49:29.226589Z  INFO herdr::pane: pane session terminated pane=1 pid=7193 signal=Hangup
+2026-08-20T21:49:29.226817Z  WARN herdr::app::actions: PaneDied for unknown pane pane=1
+2026-08-20T21:49:30.375247Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 1, signal: None }"
+2026-08-20T21:49:30.438738Z  INFO herdr::pane: pane session terminated pane=3 pid=10362 signal=Hangup
+2026-08-20T21:49:30.438959Z  WARN herdr::app::actions: PaneDied for unknown pane pane=3
+2026-08-20T21:49:35.440900Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T21:49:53.565201Z  INFO herdr::server::headless: client resize client_id=2 cols=88 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T21:50:28.321734Z  INFO herdr::server::headless: client resize client_id=2 cols=88 rows=18 cell_width_px=0 cell_height_px=0
+2026-08-20T21:50:30.123329Z  INFO herdr::server::headless: client resize client_id=2 cols=88 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T21:54:17.721321Z  INFO herdr::server::headless: client resize client_id=2 cols=185 rows=42 cell_width_px=0 cell_height_px=0
+2026-08-20T21:55:20.390085Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-08-20T21:55:23.153044Z  INFO herdr::server::headless: client connected client_id=4 cols=88 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-20T21:55:29.951417Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=4 status="ExitStatus { code: 1, signal: None }"
+2026-08-20T21:55:29.994907Z  INFO herdr::pane: pane session terminated pane=4 pid=10460 signal=Hangup
+2026-08-20T21:55:29.995255Z  WARN herdr::app::actions: PaneDied for unknown pane pane=4
+2026-08-20T21:55:34.997156Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T21:58:56.182284Z  INFO herdr::server::headless: client resize client_id=4 cols=88 rows=41 cell_width_px=0 cell_height_px=0
+2026-08-20T21:58:56.282368Z  INFO herdr::server::headless: client resize client_id=4 cols=88 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T21:59:00.986326Z  INFO herdr::server::headless: client resize client_id=4 cols=183 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T21:59:01.086432Z  INFO herdr::server::headless: client resize client_id=4 cols=88 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T22:04:23.295396Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=5 rows=38 cols=84 scrollback_limit_bytes=10000000
+2026-08-20T22:04:23.296715Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=5 pid=19056
+2026-08-20T22:04:23.296873Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:04:28.299576Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:11:02.536963Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="qwen"
+2026-08-20T22:11:15.552356Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t7"
+2026-08-20T22:11:20.556434Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:14:27.902065Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:14:32.905834Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:18:06.951722Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t7"
+2026-08-20T22:18:11.955494Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:27:50.120096Z  INFO herdr::api::server: api server listening path=/home/mateusdalligna/.config/herdr/herdr.sock
+2026-08-20T22:27:50.122033Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-20T22:27:50.122924Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=1807
+2026-08-20T22:27:50.123161Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-20T22:27:50.123926Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=1810
+2026-08-20T22:27:50.124889Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-08-20T22:27:50.124903Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-20T22:27:50.200860Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-20T22:27:50.202667Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/mateusdalligna
+2026-08-20T22:27:50.202772Z  INFO herdr::server::headless: client protocol socket listening path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-20T22:27:50.202801Z  INFO herdr::server::headless: herdr server started api_socket=/home/mateusdalligna/.config/herdr/herdr.sock client_socket=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-20T22:27:50.203053Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=1789
+2026-08-20T22:27:50.220091Z  INFO herdr::server::headless: client connected client_id=2 cols=183 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-20T22:27:51.556804Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:27:56.562116Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:28:08.218501Z  WARN herdr::detect::manifest_update: agent detection manifest update failed: failed to fetch https://herdr.dev/agent-detection/index.toml
+2026-08-20T22:28:45.232559Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=38 cols=157 scrollback_limit_bytes=10000000
+2026-08-20T22:28:45.233852Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=2301
+2026-08-20T22:28:45.234029Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:28:50.236796Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:28:51.616678Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:28:56.650396Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:29:40.977310Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:29:45.979993Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:30:17.009946Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:30:22.012652Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:30:28.162147Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:30:28.922455Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:30:29.706591Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:30:31.634733Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:30:36.637341Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:30:37.163021Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t7"
+2026-08-20T22:30:42.170295Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:37:32.893028Z  INFO herdr::api::server: api server listening path=/home/mateusdalligna/.config/herdr/herdr.sock
+2026-08-20T22:37:32.894905Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-20T22:37:32.895758Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=1830
+2026-08-20T22:37:32.896479Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-20T22:37:32.897235Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=1833
+2026-08-20T22:37:32.897443Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-20T22:37:32.898227Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=1837
+2026-08-20T22:37:32.899130Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-08-20T22:37:32.899141Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-20T22:37:32.973555Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-20T22:37:32.975366Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/mateusdalligna
+2026-08-20T22:37:32.975460Z  INFO herdr::server::headless: client protocol socket listening path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-20T22:37:32.975481Z  INFO herdr::server::headless: herdr server started api_socket=/home/mateusdalligna/.config/herdr/herdr.sock client_socket=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-20T22:37:32.975721Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=1812
+2026-08-20T22:37:32.993816Z  INFO herdr::server::headless: client connected client_id=2 cols=183 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-20T22:37:34.492536Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:37:35.983710Z  WARN herdr::detect::manifest_update: agent detection manifest update failed: failed to fetch https://herdr.dev/agent-detection/index.toml
+2026-08-20T22:37:37.957098Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:37:39.599133Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 1, signal: None }"
+2026-08-20T22:37:39.602786Z  INFO herdr::pane: pane session terminated pane=3 pid=1837 signal=Hangup
+2026-08-20T22:37:39.602917Z  WARN herdr::app::actions: PaneDied for unknown pane pane=3
+2026-08-20T22:37:39.986462Z  WARN herdr::logging: update check failed event="update.check.complete" subsystem="update" outcome="error" err="failed to fetch update manifest"
+2026-08-20T22:37:44.605271Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:37:45.957540Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=4 rows=38 cols=157 scrollback_limit_bytes=10000000
+2026-08-20T22:37:45.959091Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=4 pid=2309
+2026-08-20T22:37:45.959228Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:37:47.735131Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t7"
+2026-08-20T22:37:52.737483Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:40:15.808909Z  INFO herdr::server::headless: client resize client_id=2 cols=88 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T22:40:21.814756Z  INFO herdr::server::headless: client resize client_id=2 cols=183 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T22:40:22.615660Z  INFO herdr::server::headless: client resize client_id=2 cols=88 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T22:40:25.018375Z  INFO herdr::server::headless: client resize client_id=2 cols=183 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-20T22:40:32.315574Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:40:37.317202Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:53:56.806420Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:54:01.808539Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:55:22.703839Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:55:27.019805Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:55:32.022557Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:56:33.467226Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:56:38.501013Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T22:59:38.357079Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:59:42.285524Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T22:59:47.320188Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T23:01:16.143194Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T23:01:21.145645Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T23:01:22.895320Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T23:01:27.898531Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T23:07:33.411529Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-20T23:09:07.516541Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T23:09:12.552125Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T23:09:38.269147Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T23:09:43.271764Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T23:09:43.805737Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=5 rows=38 cols=79 scrollback_limit_bytes=10000000
+2026-08-20T23:09:43.807431Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=5 pid=13691
+2026-08-20T23:09:43.825597Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T23:09:45.167486Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=5 status="ExitStatus { code: 1, signal: None }"
+2026-08-20T23:09:45.171446Z  INFO herdr::pane: pane session terminated pane=5 pid=13691 signal=Hangup
+2026-08-20T23:09:45.171567Z  WARN herdr::app::actions: PaneDied for unknown pane pane=5
+2026-08-20T23:09:45.861663Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=6 rows=38 cols=79 scrollback_limit_bytes=10000000
+2026-08-20T23:09:45.862963Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=6 pid=13777
+2026-08-20T23:09:45.863124Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-20T23:09:50.865053Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T23:10:17.504385Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=6 status="ExitStatus { code: 1, signal: None }"
+2026-08-20T23:10:17.528239Z  INFO herdr::pane: pane session terminated pane=6 pid=13777 signal=Hangup
+2026-08-20T23:10:17.528417Z  WARN herdr::app::actions: PaneDied for unknown pane pane=6
+2026-08-20T23:10:22.531175Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-20T23:15:05.745661Z  INFO herdr::server::headless: client detached client_id=2
+2026-08-20T23:15:05.750444Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-08-25T21:46:48.870452Z  INFO herdr::api::server: api server listening path=/home/mateusdalligna/.config/herdr/herdr.sock
+2026-08-25T21:46:48.872391Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-25T21:46:48.873242Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=4470
+2026-08-25T21:46:48.873980Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-25T21:46:48.874828Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=4473
+2026-08-25T21:46:48.875001Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-25T21:46:48.875645Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=4476
+2026-08-25T21:46:48.876541Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-08-25T21:46:48.876552Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-25T21:46:48.969733Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-25T21:46:48.973035Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/mateusdalligna
+2026-08-25T21:46:48.973253Z  INFO herdr::server::headless: client protocol socket listening path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-25T21:46:48.973296Z  INFO herdr::server::headless: herdr server started api_socket=/home/mateusdalligna/.config/herdr/herdr.sock client_socket=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-25T21:46:48.973534Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=4452
+2026-08-25T21:46:49.024130Z  INFO herdr::server::headless: client connected client_id=2 cols=183 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-25T21:46:50.826410Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 1, signal: None }"
+2026-08-25T21:46:50.830384Z  INFO herdr::pane: pane session terminated pane=3 pid=4476 signal=Hangup
+2026-08-25T21:46:50.830530Z  WARN herdr::app::actions: PaneDied for unknown pane pane=3
+2026-08-25T21:46:55.832058Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:08:15.619509Z  INFO herdr::api::server: api server listening path=/home/mateusdalligna/.config/herdr/herdr.sock
+2026-08-25T22:08:15.621587Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-25T22:08:15.622456Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=2223
+2026-08-25T22:08:15.623193Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-25T22:08:15.623969Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=2226
+2026-08-25T22:08:15.624879Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-08-25T22:08:15.624892Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-25T22:08:15.702012Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-25T22:08:15.703911Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/mateusdalligna
+2026-08-25T22:08:15.704033Z  INFO herdr::server::headless: client protocol socket listening path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-25T22:08:15.704052Z  INFO herdr::server::headless: herdr server started api_socket=/home/mateusdalligna/.config/herdr/herdr.sock client_socket=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-25T22:08:15.704236Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=2205
+2026-08-25T22:08:15.721610Z  INFO herdr::server::headless: client connected client_id=2 cols=183 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-25T22:08:23.702777Z  INFO herdr::pane: agent changed pane=2 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(2509)
+2026-08-25T22:08:31.970087Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-25T22:08:33.361751Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t7"
+2026-08-25T22:08:38.362922Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:08:39.360797Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-25T22:08:42.007998Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t7"
+2026-08-25T22:08:45.231441Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+                                                                                                                                                                                                                                                                                                                                                                                2026-08-25T22:10:45.460056Z  INFO herdr::api::server: api server listening path=/home/mateusdalligna/.config/herdr/herdr.sock
+2026-08-25T22:10:45.461957Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-25T22:10:45.462840Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=2609
+2026-08-25T22:10:45.463607Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-25T22:10:45.464412Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=2612
+2026-08-25T22:10:45.465328Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-08-25T22:10:45.465340Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-25T22:10:45.544242Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-25T22:10:45.546024Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/mateusdalligna
+2026-08-25T22:10:45.546103Z  INFO herdr::server::headless: client protocol socket listening path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-25T22:10:45.546121Z  INFO herdr::server::headless: herdr server started api_socket=/home/mateusdalligna/.config/herdr/herdr.sock client_socket=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-25T22:10:45.546300Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=2591
+2026-08-25T22:10:45.560685Z  INFO herdr::server::headless: client connected client_id=2 cols=88 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-25T22:18:33.361996Z  INFO herdr::server::headless: client connected client_id=4 cols=183 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-25T22:18:44.473731Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-25T22:18:49.476018Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:18:54.030687Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=38 cols=157 scrollback_limit_bytes=10000000
+2026-08-25T22:18:54.032193Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=3976
+2026-08-25T22:18:54.032376Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t9"
+2026-08-25T22:18:56.593881Z  INFO herdr::pane: agent changed pane=3 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(4071)
+2026-08-25T22:18:59.034448Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:19:16.007403Z  INFO herdr::pane: agent changed pane=3 previous_agent=Some(OpenCode) agent=None pgid=Some(3976)
+2026-08-25T22:20:21.276127Z  INFO herdr::server::headless: client resize client_id=2 cols=80 rows=24 cell_width_px=0 cell_height_px=0
+2026-08-25T22:20:21.277229Z  INFO herdr::server::headless: client detached client_id=2
+2026-08-25T22:20:21.278347Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-08-25T22:20:48.759586Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=4 rows=38 cols=157 scrollback_limit_bytes=10000000
+2026-08-25T22:20:48.761313Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=4 pid=4802
+2026-08-25T22:20:48.761531Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t9"
+2026-08-25T22:20:53.772994Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:21:52.151818Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=4 status="ExitStatus { code: 1, signal: None }"
+2026-08-25T22:21:52.175388Z  INFO herdr::pane: pane session terminated pane=4 pid=4802 signal=Hangup
+2026-08-25T22:21:52.175605Z  WARN herdr::app::actions: PaneDied for unknown pane pane=4
+2026-08-25T22:21:57.177441Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:23:47.100877Z  INFO herdr::server::headless: client resize client_id=4 cols=88 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-25T22:23:51.407514Z  INFO herdr::server::headless: client resize client_id=4 cols=183 rows=39 cell_width_px=0 cell_height_px=0
+2026-08-25T22:25:20.891603Z  INFO herdr::pane: agent changed pane=3 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(6223)
+2026-08-25T22:27:41.867022Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-25T22:27:46.903436Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:28:12.611185Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t9"
+2026-08-25T22:28:17.646445Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:28:48.912840Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-25T22:28:53.948658Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:29:23.846900Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t9"
+2026-08-25T22:29:28.848446Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:29:38.403291Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t9"
+2026-08-25T22:29:40.873930Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t9"
+2026-08-25T22:29:41.714178Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t8"
+2026-08-25T22:29:46.716157Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
+2026-08-25T22:29:59.509384Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t9"
+2026-08-25T22:30:01.492747Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=5 rows=38 cols=157 scrollback_limit_bytes=10000000
+2026-08-25T22:30:01.494131Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=5 pid=9438
+2026-08-25T22:30:01.494311Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t9"
+2026-08-25T22:30:06.497312Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/mateusdalligna/.config/herdr/session.json workspaces=1
