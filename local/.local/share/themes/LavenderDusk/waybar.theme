@@ -1,3 +1,4 @@
+$HOME/.config/waybar/theme.css|$HOME/.local/share/scripts/startwaybar.sh
 @define-color bar-bg rgba(30, 30, 45, 0.75);
 
 @define-color main-bg #1E1E2D;
