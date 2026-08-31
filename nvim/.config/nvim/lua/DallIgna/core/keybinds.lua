@@ -125,10 +125,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- ------------------------------------------------------------------------------------------
---  Copilot
+--  NeoCodeium
 -- ------------------------------------------------------------------------------------------
 
-keymap("n", "<leader>cc", "<cmd>Copilot toggle<cr>", { desc = "Toggle Copilot" })
+keymap("n", "<leader>cc", "<cmd>NeoCodeium toggle<cr>", { desc = "Toggle NeoCodeium" })
 
 -- ------------------------------------------------------------------------------------------
 --  Telescope
