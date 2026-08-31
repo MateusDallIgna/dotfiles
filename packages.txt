@@ -1,5 +1,5 @@
-hyprlock
-glava
+impala
+wlctl-bin
 herdr
 sddm
 kitty
@@ -285,6 +285,8 @@ procps-ng
 protobuf
 protobuf-c
 psmisc
+protobuf-c
+psmisc
 python
 python-annotated-types
 python-attrs
@@ -532,8 +534,6 @@ xcb-util-errors
 xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
-xcb-util-wm
-xcur2png
 xdg-dbus-proxy
 xdg-desktop-portal
 xdg-desktop-portal-gtk

@@ -48,3 +48,19 @@
 2026-08-25T22:18:33.260035Z  INFO herdr::client: connecting to server path=/home/mateusdalligna/.config/herdr/herdr-client.sock
 2026-08-25T22:18:33.361900Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
 2026-08-25T22:20:21.276312Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=2590
+2026-08-25T23:37:05.036010Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=3904
+2026-08-26T18:49:40.082588Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=90317
+2026-08-26T18:49:40.082928Z  INFO herdr::client: connecting to server path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-26T18:49:40.090293Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-08-26T20:43:44.047593Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=110128
+2026-08-26T20:43:44.047623Z  INFO herdr::client: connecting to server path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-26T20:43:44.216211Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-08-26T21:05:22.610595Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=110128
+2026-08-26T21:05:26.008208Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=90317
+2026-08-31T21:51:48.938998Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=6951
+2026-08-31T21:51:48.941401Z  INFO herdr::client: connecting to server path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-31T21:51:48.943824Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-08-31T21:53:52.961629Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=6951
+2026-08-31T21:55:10.519379Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=9918
+2026-08-31T21:55:10.519429Z  INFO herdr::client: connecting to server path=/home/mateusdalligna/.config/herdr/herdr-client.sock
+2026-08-31T21:55:10.703943Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
