@@ -1,3 +1,5 @@
+aria2
+gazelle-tui
 impala
 wlctl-bin
 herdr
@@ -143,6 +145,7 @@ less
 licenses
 lilv
 linux
+nvidia-open-dmks
 linux-api-headers
 linux-firmware
 linux-firmware-amdgpu

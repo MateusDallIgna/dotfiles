@@ -108,6 +108,7 @@
   "network": {
     "format": "{ifname}",
     "format-wifi": "",
+    "on-click" : "gazelle", 
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
     "format-disconnected": "",
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
