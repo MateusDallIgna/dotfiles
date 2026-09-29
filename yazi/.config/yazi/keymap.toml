@@ -83,8 +83,8 @@ keymap = [
 	{ on = "s",         run = "search --via=fd",             desc = "Search files by name via fd" },
 	{ on = "S",         run = "search --via=rg",             desc = "Search files by content via ripgrep" },
 	{ on = "<C-s>",     run = "escape --search",             desc = "Cancel the ongoing search" },
-	{ on = "z",         run = "plugin fzf",                  desc = "Jump to a file/directory via fzf" },
-	{ on = "Z",         run = "plugin zoxide",               desc = "Jump to a directory via zoxide" },
+	{ on = "Z",         run = "plugin fzf",                  desc = "Jump to a file/directory via fzf" },
+	{ on = "z",         run = "plugin zoxide",               desc = "Jump to a directory via zoxide" },
 
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Linemode: size" },
@@ -130,12 +130,30 @@ keymap = [
 	{ on = [ "g", "d" ],       run = "cd ~/Documentos",   desc = "Go ~/Documentos" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
-	{ on = [ "g", "p" ],       run = "cd ~/Documentos/Projects/", desc = "Go to project directory"},
+	{ on = [ "g", "p" ], run = "cd ~/Documentos/Big_Projects/", desc = "Go to project directory"},
 	{ on = [ "g", "w" ],       run = "cd ~/Documentos/Workspace/", desc = "Go to Workspace directory"},
 	{ on = [ "g", "l" ],       run = "cd ~/.local", desc = "Go to .local directory"},
 	{ on = [ "g", "y" ],       run = "cd ~/.config/yazi", desc = "Go to yazi directory"},
 	{ on = [ "g", "n" ],       run = "cd ~/.config/nvim", desc = "Go to nvim directory"},
-	{ on = [ "g", "z" ],       run = "shell 'nvim ~/.zshrc' --block", desc = "Open zshrc"},
+	{ on = [ "g", "z" ], run = "shell 'nvim ~/.zshrc' --block", desc = "Open zshrc"},
+
+	# Bookmarks (whoosh)
+	{ on = "b", run = "plugin whoosh jump_by_key", desc = "Jump bookmark by key" },
+	{ on = "B", run = "plugin whoosh save_cwd",    desc = "Bookmark current directory" },
+
+	# Plugins
+	{ on = [ "g", "i" ], run = "plugin lazygit",                desc = "Lazygit" },
+	{ on = [ "g", "s" ], run = "plugin vcs-files",              desc = "Show Git file changes" },
+	{ on = [ "g", "R" ], run = "plugin cd-git-root",            desc = "Go to git repository root" },
+	{ on = "F",          run = "plugin jump-to-char",           desc = "Jump to char" },
+	{ on = "T",          run = "plugin toggle-pane min-preview", desc = "Toggle preview pane" },
+	{ on = "M",          run = "plugin toggle-pane max-preview", desc = "Maximize preview pane" },
+	{ on = "C",          run = "plugin compress",               desc = "Compress selection" },
+	{ on = "(",          run = "plugin goto-sibling -- prev",   desc = "Previous sibling folder" },
+	{ on = ")",          run = "plugin goto-sibling -- next",   desc = "Next sibling folder" },
+	{ on = "+",          run = "plugin zoom 1",                 desc = "Zoom in preview" },
+	{ on = "=",          run = "plugin zoom -1",                desc = "Zoom out preview" },
+	{ on = [ "m", "c" ], run = "linemode size_mtime",           desc = "Linemode: size+mtime" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },

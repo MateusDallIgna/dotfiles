@@ -10,3 +10,8 @@ known_hosts.old
 *.bak
 __pycache__/
 node_modules/
+
+# yazi (plugins instalados via ya pkg + estado)
+yazi/.config/yazi/bookmarks
+yazi/.config/yazi/package.toml
+yazi/.config/yazi/plugins/
