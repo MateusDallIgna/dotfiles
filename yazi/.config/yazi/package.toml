@@ -1,0 +1,72 @@
+[[plugin.deps]]
+use = "WhoSowSee/whoosh"
+rev = "43f3202"
+hash = "da14dfe482886e756150ae4f5c2bb23"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "7200d73"
+hash = "347cc6b190eb0c2fd60513cc7ae37412"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:vcs-files"
+rev = "7200d73"
+hash = "4f2a05edce73aef2bceb2ee2c134c8f2"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "7200d73"
+hash = "5b2fbef7d1513ce38ff72623a071a5e"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "7200d73"
+hash = "7a4b4237223aaa94e589d1c01a23542a"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "7200d73"
+hash = "f281261ff04ad7ec867c3f802a50835f"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:zoom"
+rev = "7200d73"
+hash = "558bbb58e3dd36d488280a8f10e7b904"
+
+[[plugin.deps]]
+use = "Lil-Dank/lazygit"
+rev = "e73fd74"
+hash = "6ea5f37c7f219671ec504cb8311f889d"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "80e5268"
+hash = "868db729374b97871bc30b96d0e9061f"
+
+[[plugin.deps]]
+use = "FichteFoll/goto-sibling"
+rev = "bd85b36"
+hash = "235c02042a54fb28b37b5b709ca2cc07"
+
+[[plugin.deps]]
+use = "ciarandg/cd-git-root"
+rev = "a0e0f4b"
+hash = "b84a85f3b513bd9c0a0ab93cc7c8e4c3"
+
+[[plugin.deps]]
+use = "WhoSowSee/glyphmark"
+rev = "3fc6b0e"
+hash = "3f36955f9f8c5c20489fcf79830ae4d3"
+
+[[plugin.deps]]
+use = "shafayetejaman/sduf"
+rev = "f43ba4a"
+hash = "5f9b8fcd37fc225437a213c9674a0ffa"
+
+[[plugin.deps]]
+use = "barbanevosa/linemode-plus"
+rev = "4d0d034"
+hash = "5d0ac26725d9a975bef1d0887374f10e"
+
+[flavor]
+deps = []
