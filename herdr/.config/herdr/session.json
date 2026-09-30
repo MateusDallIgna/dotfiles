@@ -4,58 +4,29 @@
     {
       "id": "w1",
       "custom_name": null,
-      "identity_cwd": "/home/mateusdalligna",
+      "identity_cwd": "/home/mateusdalligna/Documentos/Workspace",
       "public_pane_numbers": {
-        "7": 27,
-        "4": 21,
-        "1": 13
+        "3": 32
       },
-      "next_public_pane_number": 28,
+      "next_public_pane_number": 33,
       "public_tab_numbers": [
-        7,
-        9
+        13
       ],
-      "next_public_tab_number": 10,
+      "next_public_tab_number": 14,
       "tabs": [
         {
           "custom_name": null,
           "layout": {
-            "Pane": 1
+            "Pane": 3
           },
           "panes": {
-            "1": {
-              "cwd": "/home/mateusdalligna"
-            }
-          },
-          "zoomed": false,
-          "focused": 1,
-          "root_pane": 1
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Split": {
-              "direction": "Vertical",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 4
-              },
-              "second": {
-                "Pane": 7
-              }
-            }
-          },
-          "panes": {
-            "7": {
+            "3": {
               "cwd": "/home/mateusdalligna/Documentos/Workspace"
-            },
-            "4": {
-              "cwd": "/home/mateusdalligna"
             }
           },
           "zoomed": false,
-          "focused": 7,
-          "root_pane": 4
+          "focused": 3,
+          "root_pane": 3
         }
       ],
       "active_tab": 0
@@ -63,7 +34,7 @@
   ],
   "active": 0,
   "selected": 0,
-  "sidebar_width": 26,
-  "sidebar_section_split": 0.5,
+  "sidebar_width": null,
+  "sidebar_section_split": null,
   "collapsed_space_keys": []
 }
