@@ -18,10 +18,6 @@ require("git"):setup({
 	order = 1500,
 })
 
-require("full-border"):setup({
-	type = ui.Border.ROUNDED,
-})
-
 require("glyphmark"):setup()
 
 require("sduf"):setup()
