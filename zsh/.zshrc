@@ -38,7 +38,8 @@ alias cd='z'
 alias cat='bat'
 alias top='btop'
 alias h='herdr'
-alias t='tmux'
+alias tm='tmux'
+alias t='tuios'
 
 # Directory navigation shortcuts
 alias ..='cd ..'

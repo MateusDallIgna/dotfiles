@@ -1,3 +1,5 @@
+lazygit
+tuios-bin
 aria2
 gazelle-tui
 impala
