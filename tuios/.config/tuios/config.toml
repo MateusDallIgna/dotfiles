@@ -12,7 +12,8 @@
 # ============================================================================
 # APPEARANCE SETTINGS
 # ============================================================================
-# Many of these can be changed live from the in-app settings page (open it with the leader key followed by ',').
+# Many of these can be changed live from the in-app settings page
+# (open it with the leader key followed by ',').
 #
 # border_style: rounded, normal, thick, double, hidden, block, ascii,
 #               outer-half-block, inner-half-block
@@ -187,7 +188,7 @@ copy_entry = 'cursor'
 osc52_write = 'focused'
 
 [appearance.sidebar]
-enabled = true
+enabled = false
 position = 'right'
 width = 24
 workspaces = ''

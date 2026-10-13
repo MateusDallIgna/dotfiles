@@ -27,6 +27,7 @@ hl.bind("Print", hl.dsp.exec_cmd(scrPath .. "/screenshot.sh window"))
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd(scrPath .. "/keyboardswitch.sh"))
 hl.bind(mainMod .. " + ALT + W", hl.dsp.exec_cmd(scrPath .. "/waybarswitcher.sh"))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -theme .config/rofi/styles/minimal.rasi | cliphist decode | wl-copy"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(scrPath .. "/opencode-clipboard.sh"))
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(home .. "/.config/hyprlock/scripts/hyprlock.sh"))
 
 -- Scrolling layout: focus rolls the tape horizontally, plain focus within column
