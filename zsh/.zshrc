@@ -69,3 +69,9 @@ fi
 export PATH=$PATH:$HOME/.spicetify
 
 alias tm='tmux new-session -A -s main'
+
+# Pi
+export PATH="/home/mateusdall/.pi/agent/bin:$PATH"
+
+export PATH="$HOME/.ghcup/bin:$PATH"
+eval "$(atuin init zsh)"
