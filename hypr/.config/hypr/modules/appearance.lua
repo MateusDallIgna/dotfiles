@@ -36,14 +36,14 @@ hl.config({
 			new_optimizations = true,
 
 			contrast = 2,
-			vibrancy = 2,
+			vibrancy = 1,
 			noise = 0.0,
 		},
 
 		shadow = {
 			enabled = true,
 			range = 5,
-			render_power = 6,
+			render_power = 4,
 			color = 0xff1a1a1a,
 		},
 	},
