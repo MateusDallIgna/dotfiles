@@ -70,7 +70,6 @@ fi
 
 export PATH=$PATH:$HOME/.spicetify
 
-alias t='tmux new-session -A -s main'
 
 # Pi
 export PATH="/home/mateusdall/.pi/agent/bin:$PATH"
