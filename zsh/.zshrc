@@ -38,8 +38,10 @@ alias cd='z'
 alias cat='bat'
 alias top='btop'
 alias h='herdr'
-alias tm='tmux'
-alias t='tuios'
+alias t='tmux'
+alias tu='tuios'
+alias op='opencode .'
+alias p='opencode mini'
 
 # Directory navigation shortcuts
 alias ..='cd ..'
@@ -68,10 +70,11 @@ fi
 
 export PATH=$PATH:$HOME/.spicetify
 
-alias tm='tmux new-session -A -s main'
+alias t='tmux new-session -A -s main'
 
 # Pi
 export PATH="/home/mateusdall/.pi/agent/bin:$PATH"
 
 export PATH="$HOME/.ghcup/bin:$PATH"
+
 eval "$(atuin init zsh)"

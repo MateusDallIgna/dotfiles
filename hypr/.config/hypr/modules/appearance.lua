@@ -28,9 +28,9 @@ hl.config({
 		inactive_opacity = 1.0,
 
 		blur = {
-			brightness = 0.8,
+			brightness = 0.5,
 			enabled = true,
-			size = 8,
+			size = 10,
 			passes = 4,
 
 			new_optimizations = true,
@@ -38,6 +38,14 @@ hl.config({
 			contrast = 2,
 			vibrancy = 1,
 			noise = 0.0,
+
+			-- variant = 8,
+			-- acrylic = {
+			-- 	refraction = 24,
+			-- 	bulb = 5,
+			-- 	clarity = 0.40,
+			-- 	aberration = 0.25,
+			-- },
 		},
 
 		shadow = {
