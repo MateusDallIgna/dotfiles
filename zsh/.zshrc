@@ -5,13 +5,30 @@ PATH=$PATH:$HOME/.local/share/scripts
 # fi
 
 # Path to your oh-my-zsh installation.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # Oh-my-zsh installation path
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Starship config
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+eval "$(starship init zsh)"
+
+# Bring Starship's right prompt up to the first (decoration) line,
+# like p10k does with its right segments.
+RPROMPT=$'%{\e[1A%}'$RPROMPT$'%{\e[1B%}'
+
+# Export Starship's transient state so custom modules can color the right tail
+precmd_functions+=(_starship_export_state)
+_starship_export_state() {
+  export STARSHIP_DURATION="${STARSHIP_DURATION:-}"
+  export STARSHIP_JOBS_COUNT="${STARSHIP_JOBS_COUNT:-0}"
+  export STARSHIP_CMD_STATUS="${STARSHIP_CMD_STATUS:-0}"
+}
 
 # Enable zoxide
 eval "$(zoxide init zsh)"
@@ -51,7 +68,7 @@ alias .3='cd ../../..'
 alias mkdir='mkdir -p'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Function to change directory using yazi and update the shell's current directory
 function y() {
@@ -77,3 +94,7 @@ export PATH="/home/mateusdall/.pi/agent/bin:$PATH"
 export PATH="$HOME/.ghcup/bin:$PATH"
 
 eval "$(atuin init zsh)"
+
+#Better man pages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"

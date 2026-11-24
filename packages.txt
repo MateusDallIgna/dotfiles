@@ -1,3 +1,5 @@
+navi
+tealdeer
 lazygit
 tuios-bin
 aria2
@@ -458,7 +460,6 @@ thunar
 timer
 tinysparql
 tk
-tldr
 tomlplusplus
 tpm2-tss
 tree-sitter

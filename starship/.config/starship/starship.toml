@@ -1,0 +1,205 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# p10k-style: two lines with rounded powerline + frame ornaments.
+# Colors are terminal ANSI slots (0-15), so they follow your Kitty theme.
+add_newline = true
+
+format = """
+[╭─](fg:gray)[](fg:white)$os[](fg:white bg:blue)${custom.dir_icon}$directory$git_branch$git_status${custom.git_tail}${custom.plain_tail}$line_break\
+[╰─](fg:gray) """
+
+right_format = "${custom.status_cap_ok}${custom.status_cap_err}$status$cmd_duration$jobs$python$conda${custom.right_tail_yellow}${custom.right_tail_black}${custom.right_tail_red}"
+
+palette = 'term_colors'
+
+[package]
+disabled = true
+
+# --- os_icon: white bg, dark fg (p10k: bg 7 / fg 232) -----------------------
+[os]
+disabled = false
+format = '[ $symbol ](bg:white fg:dark)'
+
+[os.symbols]
+Windows = " "
+Ubuntu = "󰕈 "
+SUSE = " "
+Raspbian = "󰐿 "
+Mint = "󰣭 "
+Macos = "󰀵 "
+Manjaro = " "
+Linux = "󰌽 "
+Gentoo = "󰣨 "
+Fedora = "󰣛 "
+Alpine = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = "󰣇 "
+Artix = "󰣇 "
+CachyOS = " "
+CentOS = " "
+Debian = "󰣚 "
+EndeavourOS = " "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
+Void = " "
+
+# --- dir: blue bg, light fg (p10k: bg 4 / fg 254) --------------------------
+[directory]
+format = '[ $path ](bg:blue fg:light)'
+truncation_length = 3
+truncation_symbol = ''
+home_symbol = '~'
+truncate_to_repo = true
+
+# p10k shows a home icon only when you're in $HOME and a folder icon elsewhere.
+# Starship's home_symbol is static, so this custom module picks the icon per cwd.
+[custom.dir_icon]
+when = 'true'
+command = 'if [ "$PWD" = "$HOME" ]; then printf ""; else printf ""; fi'
+format = '[ $output](bg:blue fg:light)'
+
+# --- vcs: branch icon + p10k status glyphs (bg 3 / fg 0) -------------------
+[git_branch]
+symbol = ' '
+format = '[](fg:blue bg:yellow)[ $symbol$branch ](bg:yellow fg:black)'
+truncation_symbol = '…'
+truncation_length = 32
+
+[git_status]
+# No subsegment separator after the branch; conditional hides it when clean.
+format = '([$all_status$ahead_behind ](bg:yellow fg:black))'
+ahead = '⇡$count'
+behind = '⇣$count'
+diverged = '⇣$behind_count⇡$ahead_count'
+conflicted = '~$count'
+stashed = '*$count'
+modified = '!$count'
+staged = '+$count'
+untracked = '?$count'
+
+# --- right prompt ----------------------------------------------------------
+# status: ok = green on black, error = yellow on red (p10k: 2/0 and 3/1)
+[status]
+disabled = false
+format = '[ $symbol ]($style)'
+success_symbol = '✔'
+symbol = '✘'
+success_style = 'bg:black fg:green'
+failure_style = 'bg:red fg:black'
+
+# command_execution_time: yellow bg, black fg (p10k: bg 3 / fg 0)
+[cmd_duration]
+disabled = false
+min_time = 2_000
+show_milliseconds = false
+format = '[](fg:yellow bg:black)[ $duration  ](bg:yellow fg:black)'
+
+# background_jobs: black bg, cyan fg (p10k: bg 0 / fg 6)
+[jobs]
+number_threshold = 1
+format = '[](fg:black bg:yellow)[ $number  ](bg:black fg:cyan)'
+
+# virtualenv / anaconda: blue bg, black fg (p10k: bg 4 / fg 0)
+# Starship has no [virtualenv] module; the python module renders $virtualenv.
+[python]
+detect_files = []
+detect_extensions = []
+format = '[](fg:blue bg:black)[  $virtualenv ](bg:blue fg:black)'
+
+[conda]
+format = '[](fg:blue bg:blue)[  $environment ](bg:blue fg:black)'
+ignore_base = true
+
+# --- second line prompt char: p10k prompt_char (76 ok / 196 error) ---------
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:bright_green)'
+error_symbol = '[❯](bold fg:bright_red)'
+vimcmd_symbol = '[❮](bold fg:bright_green)'
+vimcmd_replace_one_symbol = '[❮](bold fg:bright_blue)'
+vimcmd_replace_symbol = '[❮](bold fg:bright_blue)'
+vimcmd_visual_symbol = '[❮](bold fg:yellow)'
+
+# --- terminal-following palette -------------------------------------------
+[palettes.term_colors]
+rosewater = '9'
+flamingo = '9'
+pink = '13'
+mauve = '5'
+red = '1'
+maroon = '1'
+peach = '9'
+yellow = '3'
+green = '2'
+teal = '6'
+sky = '4'
+sapphire = '4'
+blue = '4'
+lavender = '12'
+text = '15'
+subtext1 = '15'
+subtext0 = '15'
+overlay2 = '8'
+overlay1 = '8'
+overlay0 = '8'
+surface2 = '8'
+surface1 = '0'
+surface0 = '0'
+base = '0'
+mantle = '0'
+crust = '0'
+gray = '8'
+white = '7'
+black = '0'
+cyan = '6'
+bright_green = '76'
+bright_red = '196'
+bright_blue = '12'
+dark = '232'
+light = '254'
+
+# --- dynamic tail cap: matches the color of the last segment ---------------
+# Inside a git repo the last segment is yellow; outside it is blue.
+[custom.git_tail]
+when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
+command = "printf '\ue0b4'"
+format = '[$output](fg:yellow)'
+
+[custom.plain_tail]
+when = "! git rev-parse --is-inside-work-tree >/dev/null 2>&1"
+command = "printf '\ue0b4'"
+format = '[$output](fg:blue)'
+
+# --- right tail color: follows the last visible right segment ---------------
+# duration only -> yellow, jobs/status -> black
+[custom.right_tail_yellow]
+when = 'test "${STARSHIP_CMD_STATUS:-0}" -eq 0 && test "${STARSHIP_DURATION:-0}" -ge 2000 && test "${STARSHIP_JOBS_COUNT:-0}" -lt 1'
+command = "printf '\ue0b4'"
+format = '[$output](fg:yellow)'
+
+[custom.right_tail_black]
+when = 'test "${STARSHIP_CMD_STATUS:-0}" -eq 0 && { test "${STARSHIP_DURATION:-0}" -lt 2000 || test "${STARSHIP_JOBS_COUNT:-0}" -ge 1; }'
+command = "printf '\ue0b4'"
+format = '[$output](fg:black)'
+
+# --- error state: entire right pill turns red -------------------------------
+[custom.status_cap_ok]
+when = 'test "${STARSHIP_CMD_STATUS:-0}" -eq 0'
+command = "printf '\ue0b6'"
+format = '[$output](fg:black)'
+
+[custom.status_cap_err]
+when = 'test "${STARSHIP_CMD_STATUS:-0}" -ne 0'
+command = "printf '\ue0b6'"
+format = '[$output](fg:red)'
+
+[custom.right_tail_red]
+when = 'test "${STARSHIP_CMD_STATUS:-0}" -ne 0'
+command = "printf '\ue0b4'"
+format = '[$output](fg:red)'
